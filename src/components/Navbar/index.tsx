@@ -54,9 +54,6 @@ export function Navbar() {
           {links}
         </Stack>
       </Center>
-      <Center hiddenFrom="xs">
-        <ColorSchemeToggle />
-      </Center>
     </div>
   );
 }

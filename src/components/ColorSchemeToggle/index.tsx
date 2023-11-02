@@ -1,24 +1,34 @@
-import { Button, Center, Group, rem, useMantineColorScheme } from '@mantine/core';
-import { IconBulbFilled, IconBulbOff } from '@tabler/icons-react';
+import { Switch, useMantineTheme, rem, useMantineColorScheme } from '@mantine/core';
+import { IconSun, IconMoonStars } from '@tabler/icons-react';
 
 export function ColorSchemeToggle() {
-  const { setColorScheme } = useMantineColorScheme();
-  const lightIcon = <IconBulbFilled style={{ width: rem(20), height: rem(20) }} stroke={1.5} />;
-  const darkIcon = <IconBulbOff style={{ width: rem(20), height: rem(20) }} stroke={1.5} />;
+  const theme = useMantineTheme();
+  const { toggleColorScheme } = useMantineColorScheme();
+
+  const sunIcon = (
+    <IconSun
+      style={{ width: rem(16), height: rem(16) }}
+      stroke={2.5}
+      color={theme.colors.yellow[7]}
+    />
+  );
+
+  const moonIcon = (
+    <IconMoonStars
+      style={{ width: rem(16), height: rem(16) }}
+      stroke={2.5}
+      color={theme.colors.blue[6]}
+    />
+  );
 
   return (
-    <Group gap={2}>
-      <Button
-        variant="subtle"
-        color="yellow"
-        justify="center"
-        onClick={() => setColorScheme('light')}
-      >
-        {lightIcon}
-      </Button>
-      <Button variant="subtle" color="blue" onClick={() => setColorScheme('dark')}>
-        {darkIcon}
-      </Button>
-    </Group>
+    <Switch
+      size="md"
+      color="dark.4"
+      onLabel={moonIcon}
+      offLabel={sunIcon}
+      onChange={() => toggleColorScheme()}
+      aria-label="Color scheme toggle"
+    />
   );
 }

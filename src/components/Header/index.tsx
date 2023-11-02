@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Container, Group, Burger, Center } from '@mantine/core';
+import { Container, Group, Burger, Center, Flex, Space } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { ColorSchemeToggle } from '../ColorSchemeToggle';
 
 import classes from './Header.module.css';
+import { ColorSchemeToggle } from '../ColorSchemeToggle';
 
 const links = [
   { link: '/about', label: 'Features' },
@@ -32,14 +32,16 @@ export function Header({ toggle }: { toggle: () => void }) {
   ));
 
   return (
-    <Container size="md" className={classes.inner}>
-      <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      <Group gap={5} visibleFrom="xs">
-        {items}
-        <Center visibleFrom='xs'>
+    <Container fluid size="md" className={classes.inner}>
+      <Group visibleFrom="xs" className={classes.group}>
+        <h2>JAK</h2>
+        <Space h="" />
         <ColorSchemeToggle />
-        </Center>
       </Group>
+      <Center hiddenFrom="xs">
+        <Burger opened={opened} onClick={toggle} size="sm" />
+        <ColorSchemeToggle />
+      </Center>
     </Container>
   );
 }

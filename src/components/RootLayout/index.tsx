@@ -5,13 +5,13 @@ import { useDisclosure } from '@mantine/hooks';
 import { Header } from '../Header';
 import classes from './Layout.module.css';
 
-const Layout = () => {
+const RootLayout = () => {
   const [opened, { toggle }] = useDisclosure();
   return (
     <AppShell
-      layout="default"
+
       header={{ height: 60 }}
-      navbar={{ width: 0, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+      navbar={{ width: 0, breakpoint: 'xs', collapsed: { mobile: !opened } }}
       padding="md"
       transitionDuration={300}
     >
@@ -28,4 +28,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default RootLayout;
