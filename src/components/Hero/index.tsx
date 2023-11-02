@@ -1,5 +1,5 @@
-import { Container, Title, Button, Group, Text, List, ThemeIcon, rem } from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
+import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Divider } from '@mantine/core';
+import { IconCheck, IconChevronRight } from '@tabler/icons-react';
 import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
 import profilePic from '/profilePic.png';
@@ -11,34 +11,30 @@ export function Hero() {
         <Image src={profilePic} radius="md" className={classes.image} />
         <div className={classes.content}>
           <Title className={classes.title}>
-            John's <span className={classes.highlight}>modern</span> React <br /> Resume
+            Hello, my name is <br /> <span className={classes.highlight}>John Kornegay.</span>
           </Title>
-          <Text c="dimmed" mt="md">
-            Build fully functional accessible web applications faster than ever – Mantine includes
-            more than 120 customizable components and hooks to cover you in any situation
+          <Text mt="md">
+            A highly motivated individual with a passion for web development and a desire to learn new skills.
           </Text>
-
+          <Divider  my="lg"  size='sm'/>
           <List
             mt={30}
             spacing="sm"
             size="sm"
             icon={
               <ThemeIcon size={20} radius="xl">
-                <IconCheck style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
+                <IconChevronRight style={{ width: rem(12), height: rem(12), color: 'black' }} stroke={1.5} />
               </ThemeIcon>
             }
           >
             <List.Item>
-              <b>TypeScript based</b> – build type safe applications, all components and hooks
-              export types
+              <b>Self Taught</b> – I have been learning web development for the past 2 years
             </List.Item>
             <List.Item>
-              <b>Free and open source</b> – all packages have MIT license, you can use Mantine in
-              any project
+              <b>Discipline</b> – I have been working on my own projects and learning new skills
             </List.Item>
             <List.Item>
-              <b>No annoying focus ring</b> – focus ring will appear only when user navigates with
-              keyboard
+              <b>Focus</b> – I am looking for a job as a web developer
             </List.Item>
           </List>
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Group, Burger, Center, Flex, Space } from '@mantine/core';
+import { Container, Group, Burger, Center, Text, Divider, Flex, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 import classes from './Header.module.css';
@@ -34,14 +34,21 @@ export function Header({ toggle }: { toggle: () => void }) {
   return (
     <Container fluid size="md" className={classes.inner}>
       <Group visibleFrom="xs" className={classes.group}>
-        <h2>JAK</h2>
-        <Space h="" />
+        <Text fw={500} size="xl">
+          JK Resume
+        </Text>
         <ColorSchemeToggle />
       </Group>
-      <Center hiddenFrom="xs">
+      <Group
+        hiddenFrom="xs"
+        style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}
+      >
         <Burger opened={opened} onClick={toggle} size="sm" />
+        <Text fw={700} size="lg">
+          JK Resume
+        </Text>
         <ColorSchemeToggle />
-      </Center>
+      </Group>
     </Container>
   );
 }

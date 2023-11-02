@@ -6,9 +6,9 @@ import {
   IconClipboardList,
   IconUser,
   IconBriefcase,
+  IconBrandGithub,
 } from '@tabler/icons-react';
 import classes from './Navbar.module.css';
-import { ColorSchemeToggle } from '../ColorSchemeToggle';
 
 interface NavbarLinkProps {
   icon: typeof IconHome2;
@@ -30,13 +30,13 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 const navData = [
   { icon: IconHome2, label: 'Home' },
   { icon: IconBriefcase, label: 'Projects' },
-  { icon: IconAlien, label: 'Aliens' },
   { icon: IconClipboardList, label: 'Resume' },
   { icon: IconUser, label: 'About' },
+  { icon: IconAlien, label: 'Aliens' },
 ];
 
 export function Navbar() {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
 
   const links = navData.map((link, index) => (
     <NavbarLink
@@ -48,12 +48,17 @@ export function Navbar() {
   ));
 
   return (
-    <div className={classes.navbarMain}>
-      <Center>
-        <Stack justify="center" gap={0}>
-          {links}
-        </Stack>
-      </Center>
-    </div>
+    <>
+      <div className={classes.navbarMain}>
+        <Center>
+          <Stack justify="center" gap={0}>
+            {links}
+          </Stack>
+        </Center>
+      </div>
+      <Stack justify="center" gap={0} align="center">
+        <NavbarLink icon={IconBrandGithub} label="Github" />
+      </Stack>
+    </>
   );
 }
