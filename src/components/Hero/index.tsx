@@ -1,4 +1,14 @@
-import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Divider } from '@mantine/core';
+import {
+  Container,
+  Title,
+  Button,
+  Group,
+  Text,
+  List,
+  ThemeIcon,
+  rem,
+  Divider,
+} from '@mantine/core';
 import { IconCheck, IconChevronRight } from '@tabler/icons-react';
 import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
@@ -13,22 +23,29 @@ export function Hero() {
           <Title className={classes.title}>
             Hello, my name is <br /> <span className={classes.highlight}>John Kornegay.</span>
           </Title>
-          <Text mt="md">
-            A highly motivated individual with a passion for web development and a desire to learn new skills.
+          <Text mt='xs' className={classes.goal} > Frontend Developer</Text>
+          <Text mt="sm" className={classes.objective}>
+            A highly motivated individual with a passion for web development and a desire to learn
+            new skills.
           </Text>
-          <Divider  my="lg"  size='sm'/>
+          <Divider my="lg" size="sm"/>
           <List
             mt={30}
             spacing="sm"
             size="sm"
             icon={
               <ThemeIcon size={20} radius="xl">
-                <IconChevronRight style={{ width: rem(12), height: rem(12), color: 'black' }} stroke={1.5} />
+                <IconChevronRight
+                  style={{ width: rem(12), height: rem(12) }}
+                  stroke={3}
+                  color="var(--mantine-color-white)"
+                />
               </ThemeIcon>
             }
           >
             <List.Item>
-              <b>Self Taught</b> – I have been learning web development for the past 2 years
+              <b>Self Taught</b> – Utilizing online resources, I have become proficient with HTML,
+              CSS, Javascript/Typescript, and React
             </List.Item>
             <List.Item>
               <b>Discipline</b> – I have been working on my own projects and learning new skills

@@ -12,7 +12,7 @@ const RootLayout = () => {
       header={{ height: 60 }}
       navbar={{ width: 0, breakpoint: 'sm', collapsed: { mobile: !opened } }}
       padding="md"
-      transitionTimingFunction='ease'
+      transitionTimingFunction="ease"
       transitionDuration={300}
     >
       <AppShell.Header className={classes.header}>
