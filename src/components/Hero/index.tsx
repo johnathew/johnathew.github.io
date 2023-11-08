@@ -8,27 +8,37 @@ import {
   ThemeIcon,
   rem,
   Divider,
+  Paper,
+  Stack,
 } from '@mantine/core';
-import { IconCheck, IconChevronRight } from '@tabler/icons-react';
+import { IconChevronRight } from '@tabler/icons-react';
 import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
 import profilePic from '/profilePic.png';
+import Contact from '../Contact';
 
 export function Hero() {
   return (
-    <Container size="lg">
+    <Container size="md">
       <div className={classes.inner}>
-        <Image src={profilePic} radius="md" className={classes.image} />
+        <Stack className={classes.wrapper}>
+          <Image src={profilePic} radius="md" className={classes.image} />
+          <div className={classes.contacts}>
+            <Contact />
+          </div>
+        </Stack>
         <div className={classes.content}>
           <Title className={classes.title}>
-            Hello, my name is <br /> <span className={classes.highlight}>John Kornegay.</span>
+            Hello, my name is <br /> <span className={classes.highlight}>John A. Kornegay</span>
           </Title>
-          <Text mt='xs' className={classes.goal} > Frontend Developer</Text>
+          <Text mt="xs" className={classes.goal}>
+            Frontend Developer
+          </Text>
           <Text mt="sm" className={classes.objective}>
             A highly motivated individual with a passion for web development and a desire to learn
             new skills.
           </Text>
-          <Divider my="lg" size="sm"/>
+          <Divider my="lg" size="sm" />
           <List
             mt={30}
             spacing="sm"

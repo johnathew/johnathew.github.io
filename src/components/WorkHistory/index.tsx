@@ -5,7 +5,7 @@ const WorkHistory = () => {
   return (
     <Container size="lg">
       <div className={classes.wrapper}>
-        <Timeline active={4} lineWidth={3} bulletSize={14}>
+        <Timeline active={5} lineWidth={3} bulletSize={14}>
           <Timeline.Item title="Helpdesk Specialist" className={classes.jobTitle}>
             <Divider mb="xs" />
             <Text size="xs" className={classes.locHistory}>
@@ -87,6 +87,7 @@ const WorkHistory = () => {
               </List.Item>
             </List>
           </Timeline.Item>
+          <Timeline.Item>...</Timeline.Item>
         </Timeline>
       </div>
     </Container>

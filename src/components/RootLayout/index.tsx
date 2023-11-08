@@ -10,7 +10,7 @@ const RootLayout = () => {
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{ width: 0, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+      navbar={{ width: 0, breakpoint: 'xs', collapsed: { mobile: !opened } }}
       padding="md"
       transitionTimingFunction="ease"
       transitionDuration={300}
@@ -19,7 +19,7 @@ const RootLayout = () => {
         <Header toggle={toggle} />
       </AppShell.Header>
       <AppShell.Navbar className={classes.navbar}>
-        <Navbar />
+        <Navbar toggle={toggle} />
       </AppShell.Navbar>
       <AppShell.Main>
         <Outlet />

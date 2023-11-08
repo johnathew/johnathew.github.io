@@ -21,7 +21,7 @@ interface NavbarLinkProps {
 
 function NavbarLink({ icon: Icon, label, active, onClick, to }: NavbarLinkProps) {
   return (
-    <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
+    <Tooltip label={label} position="right">
       <NavLink to={to} onClick={onClick} className={classes.link} data-active={active || undefined}>
         <Icon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
       </NavLink>
@@ -37,8 +37,13 @@ const navData = [
   { icon: IconAlien, label: 'Aliens' },
 ];
 
-export function Navbar() {
+export function Navbar({ toggle }: { toggle: () => void }) {
   const [active, setActive] = useState(0);
+
+  const clickHandler = (index: number) => {
+    setActive(index);
+    toggle();
+  };
 
   const links = navData.map((link, index) => (
     <NavbarLink
@@ -46,7 +51,7 @@ export function Navbar() {
       to={link.label.toLowerCase() === 'home' ? '/' : `/${link.label.toLowerCase()}`}
       key={link.label}
       active={index === active}
-      onClick={() => setActive(index)}
+      onClick={() => clickHandler(index)}
     />
   ));
 

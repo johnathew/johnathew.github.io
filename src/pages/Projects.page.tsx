@@ -1,7 +1,8 @@
-import React from 'react';
+import CompletedWorks from "../components/CompletedWorks";
+
 
 const Projects = () => {
-  return <div>Projects</div>;
+  return <CompletedWorks />;
 };
 
 export default Projects;
