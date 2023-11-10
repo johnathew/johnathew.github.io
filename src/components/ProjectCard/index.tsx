@@ -13,7 +13,16 @@ import {
 } from '@mantine/core';
 import classes from './ProjectCard.module.css';
 
-function ProjectCard() {
+type ProjectCardProps = {
+  imgSrc: string;
+  title: string;
+  description: string;
+  githubLink: string;
+  badge: string;
+};
+
+
+function ProjectCard({ imgSrc, title, description, githubLink, badge }: ProjectCardProps) {
   const linkProps = { href: 'https://mantine.dev', target: '_blank', rel: 'noopener noreferrer' };
   const theme = useMantineTheme();
 
@@ -21,23 +30,20 @@ function ProjectCard() {
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section>
         <a {...linkProps}>
-          <Image src="https://i.imgur.com/Cij5vdL.png" height={300} />
+          <Image src={imgSrc} height={300} />
         </a>
       </Card.Section>
 
       <Badge className={classes.rating} variant="gradient" gradient={{ from: 'yellow', to: 'red' }}>
-        outstanding
+        {badge}
       </Badge>
 
       <Text className={classes.title} fw={500} component="a" {...linkProps}>
-        Resident Evil Village review
+        {title}
       </Text>
 
       <Text fz="sm" c="dimmed" lineClamp={4}>
-        Resident Evil Village is a direct sequel to 2017’s Resident Evil 7, but takes a very
-        different direction to its predecessor, namely the fact that this time round instead of
-        fighting against various mutated zombies, you’re now dealing with more occult enemies like
-        werewolves and vampires.
+        {description}
       </Text>
 
       <Group justify="space-between" className={classes.footer}>

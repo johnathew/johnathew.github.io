@@ -16,13 +16,16 @@ import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
 import profilePic from '/profilePic.png';
 import Contact from '../Contact';
+import { Transition } from '@mantine/core';
+import { useState } from 'react';
 
 export function Hero() {
+
   return (
     <Container size="md">
       <div className={classes.inner}>
         <Stack className={classes.wrapper}>
-          <Image src={profilePic} radius="md" className={classes.image} />
+          <Image src={profilePic} radius="md" className={classes.image} fallbackSrc='https://placehold.co/400x400?text=:)' />
           <div className={classes.contacts}>
             <Contact />
           </div>

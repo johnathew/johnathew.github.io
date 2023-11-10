@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  margin-top: calc(var(--mantine-spacing-lg) * 6);
+  margin-left: calc(var(--mantine-spacing-lg) * 4);
+
+  @media( max-width: $mantine-breakpoint-xs) {
+    max-width: max-content;
+    margin:0;
+    padding:0;
+  }
+}
+
+.block {
+  padding: var(--mantine-spacing-lg);
+  margin: var(--mantine-spacing-lg);
+}
+
+.scroll {
+  height: rem(600px);
+  @media(max-width: $mantine-breakpoint-xs) {
+    height: rem(700px);
+  }
+}
+
+.textContent {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-size: rem(16px);
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-1));
+  
+  color: var(--mantine-color-dark);
+
+  @media(max-width: $mantine-breakpoint-sm) {
+    font-size: rem(14px);
+  }
+  
+}

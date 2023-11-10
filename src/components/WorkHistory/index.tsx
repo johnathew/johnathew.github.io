@@ -22,7 +22,8 @@ const WorkHistory = () => {
                 maintained.
               </List.Item>
               <List.Item>
-                Coordinate with official CDC representatives to receive reports on system updates.
+                Coordinate with official CDC representatives to receive reports on new system
+                updates.
               </List.Item>
               <List.Item>
                 Collaborate with other Helpdesk Specialists to share new procedures and critical
@@ -43,6 +44,9 @@ const WorkHistory = () => {
               </List.Item>
               <List.Item>
                 Conducted online test reviews and held office hours for personal tutoring
+              </List.Item>
+              <List.Item>
+                Graded homework assignments and exams, providing feedback to students
               </List.Item>
             </List>
           </Timeline.Item>
@@ -79,11 +83,15 @@ const WorkHistory = () => {
               </List.Item>
               <List.Item>
                 Maintained strong attention to detail, making sure all patients received the correct
-                prescription(s); professionally handled confidential patient information.{' '}
+                prescription(s); professionally handled confidential patient information
               </List.Item>
               <List.Item>
                 Provided excellent customer service, assisting patients with questions and concerns
                 regarding their prescriptions
+              </List.Item>
+              <List.Item>
+                Collaborated with other pharmacy technicians to ensure all prescriptions were filled
+                in a timely manner
               </List.Item>
             </List>
           </Timeline.Item>

@@ -1,4 +1,4 @@
-import { Group, Title, Box, Text, rem, Divider, Paper, Space, Stack } from '@mantine/core';
+import { Group, Title, Text, rem, Divider, Paper } from '@mantine/core';
 import { IconAt, IconPhone, IconSun } from '@tabler/icons-react';
 import classes from './Contact.module.css';
 
@@ -12,7 +12,14 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
   return (
     <div className={classes.wrapper} {...others}>
       <Group>
-        <Icon style={{ width: rem(14), height: rem(14), color: 'var(--mantine-color-blue-7)' }} />
+        <Icon
+          style={{
+            width: rem(16),
+            height: rem(16),
+            color: 'var(--mantine-color-blue-6)',
+            marginRight: rem(-5),
+          }}
+        />
         <Text size="xs" className={classes.title}>
           {title}
         </Text>
@@ -30,13 +37,13 @@ const contactData = [
 const Contact = () => {
   const items = contactData.map((item, index) => <ContactIcon key={index} {...item} />);
   return (
-    <Paper className={classes.contact} p="xs" radius="md" withBorder>
+    <div>
       <Title order={5} className={classes.title}>
         Contact Information
       </Title>
-      <Divider mb="xs" mr="xl" />
+      <Divider mb="xs" />
       <Group>{items}</Group>
-    </Paper>
+    </div>
   );
 };
 
