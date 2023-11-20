@@ -1,83 +1,103 @@
 import {
-  Container,
   Title,
   Button,
   Group,
   Text,
-  List,
-  ThemeIcon,
-  rem,
-  Divider,
-  Paper,
   Stack,
+  Container,
+  Divider,
+  rem,
 } from '@mantine/core';
-import { IconChevronRight } from '@tabler/icons-react';
+import { IconDownload } from '@tabler/icons-react';
 import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
-import profilePic from '/profilePic.png';
+import profile from '/Profile2.png';
 import Contact from '../Contact';
-import { Transition } from '@mantine/core';
-import { useState } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import HeroList from '../ui/List';
+
+
+
+const boxVariant = {
+  visible: { scale: 0.9 },
+  hidden: { scale: 0.5 },
+}
+
+
 
 export function Hero() {
+  const ref = useRef(null)
+  const control = useAnimation()
+  const inView = useInView(ref)
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+    else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
 
   return (
-    <Container size="md">
-      <div className={classes.inner}>
-        <Stack className={classes.wrapper}>
-          <Image src={profilePic} radius="md" className={classes.image} fallbackSrc='https://placehold.co/400x400?text=:)' />
-          <div className={classes.contacts}>
-            <Contact />
-          </div>
-        </Stack>
-        <div className={classes.content}>
-          <Title className={classes.title}>
-            Hello, my name is <br /> <span className={classes.highlight}>John A. Kornegay</span>
+    <motion.div variants={boxVariant}
+      initial="hidden"
+      animate={control}
+      transition={{ type: 'spring', duration: 0.5 }}
+      ref={ref}
+      id='home'
+    >
+      <Container size='md' className={classes.mainContainer} >
+        <Stack className={classes.mainInfo} >
+          <Title className={classes.title} id='home'>
+            John A. Kornegay
           </Title>
-          <Text mt="xs" className={classes.goal}>
-            Frontend Developer
+          <Text className={classes.goal}>
+            Frontend Developer / Web Designer / Earthling
           </Text>
-          <Text mt="sm" className={classes.objective}>
-            A highly motivated individual with a passion for web development and a desire to learn
-            new skills.
+          <Text className={classes.objective} >
+            <b>Objective</b>: A highly motivated individual seeking an internship opportunity to gain experience in the field of web development.
           </Text>
-          <Divider my="lg" size="sm" />
-          <List
-            mt={30}
-            spacing="sm"
-            size="sm"
-            icon={
-              <ThemeIcon size={20} radius="xl">
-                <IconChevronRight
-                  style={{ width: rem(12), height: rem(12) }}
-                  stroke={3}
-                  color="var(--mantine-color-white)"
-                />
-              </ThemeIcon>
-            }
-          >
-            <List.Item>
-              <b>Self Taught</b> – Utilizing online resources, I have become proficient with HTML,
-              CSS, Javascript/Typescript, and React
-            </List.Item>
-            <List.Item>
-              <b>Discipline</b> – I have been working on my own projects and learning new skills
-            </List.Item>
-            <List.Item>
-              <b>Focus</b> – I am looking for a job as a web developer
-            </List.Item>
-          </List>
-
-          <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
-              Get started
-            </Button>
-            <Button variant="default" radius="xl" size="md" className={classes.control}>
-              Source code
-            </Button>
-          </Group>
+        </Stack>
+        <div className={classes.inner}
+        >
+          <Stack className={classes.wrapper}>
+            <motion.div variants={{
+              hidden: { opacity: 0.3 },
+              visible: { opacity: 1 }
+            }} transition={{ delay: 0.3, type: 'ease', }}>
+              <Image src={profile} className={classes.image} fallbackSrc='https://placehold.co/400x400?text=:)' alt="headshot photo" />
+            </motion.div>
+            <div className={classes.contacts} >
+              <Contact />
+            </div>
+          </Stack>
+          <div className={classes.content}>
+            <Text className={classes.banner}>Features</Text>
+            <Divider mb='md' mt='xs' />
+            <HeroList />
+            <Group mt={30}>
+              <motion.div whileHover={{
+                scale: 1.1,
+                transition: { type: 'ease' },
+              }}>
+                <Button radius="sm" size="xs" className={classes.control} >
+                  Download Resume <IconDownload stroke={3} style={{
+                    width: rem(12),
+                    height: rem(12),
+                    marginLeft: '5px',
+                  }} />
+                </Button>
+              </motion.div>
+            </Group>
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </motion.div >
+
   );
 }
+
+
+// TODO: add button icon to download button

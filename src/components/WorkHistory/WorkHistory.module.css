@@ -1,16 +1,13 @@
 .wrapper {
   display: flex;
-  justify-content: space-between;
-  padding-top: calc(var(--mantine-spacing-lg) * 4);
-  padding-left: calc(var(--mantine-spacing-sm) * 5);
-
+  padding-left: calc(var(--mantine-spacing-md) * 1);
   @media (max-width: $mantine-breakpoint-sm) {
     min-width: rem(300px);
+    padding-left:0;
     padding-bottom: calc(var(--mantine-spacing-xl) * 2);
     margin-right: calc(var(--mantine-spacing-sm) * 3);
     flex-direction: column;
     align-items: center;
-    padding-top: calc(var(--mantine-spacing-xl) * 3);
     padding-bottom: calc(var(--mantine-spacing-xl) * 2);
   }
 
@@ -20,6 +17,13 @@
     margin-left: 0;
     padding: 0;
   }
+}
+.title {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  font-weight: bold;
+  font-size: var(--mantine-font-size-lg);
+  margin-bottom: var(--mantine-spacing-xs);
+  color:light-dark(var(--mantine-color-black), var(--mantine-color-white));
 }
 
 .jobTitle {
@@ -49,3 +53,4 @@
 }
 
 /* light-dark(var(--mantine-color-white), var(--mantine-color-dark-8)) */
+

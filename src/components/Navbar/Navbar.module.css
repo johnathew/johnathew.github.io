@@ -1,5 +1,4 @@
 .navbarMain {
-  flex: 1;
   margin-top: rem(50px);
 }
 
@@ -12,15 +11,13 @@
   justify-content: center;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
 
-  &:hover {
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-5));
-  }
-
   &[data-active] {
-    &,
-    &:hover {
-      background-color: var(--mantine-color-blue-light);
-      color: var(--mantine-color-blue-light-color);
-    }
+      background-color: light-dark(var(--mantine-color-blue-2), var(--mantine-color-dark-5));
   }
+}
+
+
+.icon {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-orange-2));
+
 }

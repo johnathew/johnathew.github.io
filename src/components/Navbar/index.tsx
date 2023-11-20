@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Center, Tooltip, UnstyledButton, Stack, rem, Group } from '@mantine/core';
+import { Center, Tooltip, Stack, rem, useMantineColorScheme, } from '@mantine/core';
 import {
   IconHome2,
   IconAlien,
@@ -9,7 +8,8 @@ import {
   IconBrandGithub,
 } from '@tabler/icons-react';
 import classes from './Navbar.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface NavbarLinkProps {
   icon: typeof IconHome2;
@@ -17,15 +17,30 @@ interface NavbarLinkProps {
   active?: boolean;
   onClick?(): void;
   to: string;
+
+
 }
 
 function NavbarLink({ icon: Icon, label, active, onClick, to }: NavbarLinkProps) {
+
+  const { colorScheme } = useMantineColorScheme();
+
   return (
-    <Tooltip label={label} position="right">
-      <NavLink to={to} onClick={onClick} className={classes.link} data-active={active || undefined}>
-        <Icon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
-      </NavLink>
+    <>
+    <Tooltip label={label} position="bottom">
+      <motion.div whileHover={{
+        scale: 1.2,
+        transition: { type: 'ease', stiffness: 500, },
+        backgroundColor: colorScheme === 'dark' ? 'var(--mantine-color-gray-7)' : 'var(--mantine-color-blue-9)',
+        opacity: 0.8,
+      }}
+        style={{ borderRadius: '10px' }}>
+        <NavLink to={to} onClick={onClick} className={classes.link} data-active={active || undefined}>
+          <Icon style={{ width: rem(200), height: rem(20) }} stroke={1.2} className={classes.icon} />
+        </NavLink>
+      </motion.div>
     </Tooltip>
+    </>
   );
 }
 
@@ -35,23 +50,29 @@ const navData = [
   { icon: IconClipboardList, label: 'Resume' },
   { icon: IconUser, label: 'About' },
   { icon: IconAlien, label: 'Aliens' },
+  { icon: IconBrandGithub, label: 'Github' }
 ];
 
 export function Navbar({ toggle }: { toggle: () => void }) {
-  const [active, setActive] = useState(0);
+  const location = useLocation();
 
-  const clickHandler = (index: number) => {
-    setActive(index);
-    toggle();
-  };
+  const clickHandler = () => {
+    toggle()
+  }
 
-  const links = navData.map((link, index) => (
+  const activeLink = navData.find((link) => {
+    const linkTo = link.label.toLowerCase() === 'home' ? '/' : `/${link.label.toLowerCase()}`;
+    return location.pathname === linkTo;
+  }
+  );
+
+  const links = navData.map((link) => (
     <NavbarLink
       {...link}
       to={link.label.toLowerCase() === 'home' ? '/' : `/${link.label.toLowerCase()}`}
       key={link.label}
-      active={index === active}
-      onClick={() => clickHandler(index)}
+      active={activeLink === link}
+      onClick={clickHandler}
     />
   ));
 
@@ -59,14 +80,11 @@ export function Navbar({ toggle }: { toggle: () => void }) {
     <>
       <div className={classes.navbarMain}>
         <Center>
-          <Stack justify="center" gap={0}>
+          <Stack justify="center" gap={7}>
             {links}
           </Stack>
         </Center>
       </div>
-      <Stack justify="center" gap={0} align="center">
-        <NavbarLink to="github.com" icon={IconBrandGithub} label="Github" />
-      </Stack>
     </>
   );
 }

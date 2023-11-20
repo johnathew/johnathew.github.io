@@ -1,7 +1,9 @@
 import WorkHistory from '../components/WorkHistory';
 
 const Resume = () => {
-  return <WorkHistory />;
+  return (
+    <WorkHistory />
+  )
 };
 
 export default Resume;

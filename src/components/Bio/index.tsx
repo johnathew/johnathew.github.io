@@ -9,7 +9,7 @@ import { ScrollArea } from '@mantine/core';
 const Bio = () => {
   const icon = <IconBook />;
   return (
-    <Container size='md' className={classes.wrapper}>
+    <Container size='md' className={classes.wrapper} id='about'>
       <Blockquote color="blue" icon={icon} radius='md' className={classes.block} >
         <ScrollArea className={classes.scroll}>
           <TypographyStylesProvider className={classes.textContent}>

@@ -1,7 +1,9 @@
 import Bio from "../components/Bio";
 
 const About = () => {
-  return <Bio />;
+  return (
+    <Bio />
+  );
 };
 
 export default About;

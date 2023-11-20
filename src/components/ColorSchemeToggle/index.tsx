@@ -25,8 +25,8 @@ export function ColorSchemeToggle() {
     <Switch
       size="md"
       color="dark.4"
-      onLabel={moonIcon}
-      offLabel={sunIcon}
+      onLabel={sunIcon}
+      offLabel={moonIcon}
       onChange={() => toggleColorScheme()}
       aria-label="Color scheme toggle"
     />

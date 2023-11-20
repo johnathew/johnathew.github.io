@@ -1,8 +1,9 @@
 import CompletedWorks from "../components/CompletedWorks";
 
-
 const Projects = () => {
-  return <CompletedWorks />;
+  return (
+      <CompletedWorks />
+  );
 };
 
 export default Projects;
