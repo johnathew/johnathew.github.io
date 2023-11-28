@@ -5,24 +5,22 @@
   justify-content: center ;
 }
 
-.header {
-  background-color: transparent;
-}
 
   .content {
-      display: flex;
-      padding-bottom: calc(var(--mantine-spacing-lg) * 5);
+    padding-top: calc(var(--mantine-spacing-md) * 3);
+    border: 0.5px solid var(--mantine-color-default-border);
+
       @media (max-width: $mantine-breakpoint-sm) {
         flex-direction: column;
         align-items: center;
         margin-right: 0;
-        padding-top: calc(var(--mantine-spacing-md) * 1);
+    
       } 
     
       @media (max-width: $mantine-breakpoint-xs) {
         padding-left: 0;
         padding-bottom: calc(var(--mantine-spacing-sm) * 1);
-        padding-top: calc(var(--mantine-spacing-md) * 1);
+        border: none;
         margin-inline: calc(var(--mantine-spacing-sm) * 1);
       }
   } 
@@ -31,7 +29,7 @@
 
 
   .navbar{
-    background-color: transparent;
     border-right: none;
-    padding-left: calc(var(--mantine-spacing-xl) * 2);
+
+
   }

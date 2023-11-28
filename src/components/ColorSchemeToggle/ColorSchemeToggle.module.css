@@ -1,0 +1,19 @@
+.icon {
+    width: rem(20);
+    height: rem(20);
+  }
+  
+  
+  .dark {
+    @mixin light {
+      display: none;
+    }
+
+  }
+  
+  .light {
+
+    @mixin dark {
+      display: none;
+    }
+  }

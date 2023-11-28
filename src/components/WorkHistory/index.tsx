@@ -1,12 +1,15 @@
-import { Timeline, Text, Container, List, Divider, rem } from '@mantine/core';
+import { Timeline, Text, Container, List, Divider } from '@mantine/core';
 import classes from './WorkHistory.module.css';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
+import { useMantineColorScheme } from '@mantine/core';
 
 const WorkHistory = () => {
+
+  const { colorScheme } = useMantineColorScheme();
   const boxVariant = {
-    visible: { scale: 1 },
-    hidden: { scale: 0.8 },
+    visible: { opacity: 1 },
+    hidden: { opacity: 0, },
   }
 
   const ref = useRef(null)
@@ -28,17 +31,17 @@ const WorkHistory = () => {
       animate={control}
       ref={ref}
       transition={{ type: 'spring', duration: 0.7 }}>
-      <Container size="md" py="xl" id='work'>
-        <Text ta="center" fw={500} my={rem(20)} className={classes.title}>WORK HISTORY</Text>
+      <Container size='md' id='work' p='md'>
+        <Text fw={500} className={classes.title}>Work History</Text>
         <div className={classes.wrapper}>
-          <Timeline active={5} lineWidth={3} bulletSize={14}>
+          <Timeline radius="md" active={3} lineWidth={2} bulletSize={12}>
             <Timeline.Item title="Helpdesk Specialist" className={classes.jobTitle}>
               <Divider mb="xs" />
               <Text size="xs" className={classes.locHistory}>
                 Maximus Federal - Remote; McAllen, TX
                 <span style={{ fontStyle: 'normal' }}> 2021 - Present </span>
               </Text>
-              <List size="sm" spacing="xs" center>
+              <List size="sm" spacing="xs" center >
                 <List.Item>
                   Troubleshoot official CDC software related issues for healthcare professionals and
                   the public.
@@ -74,6 +77,9 @@ const WorkHistory = () => {
                 <List.Item>
                   Graded homework assignments and exams, providing feedback to students
                 </List.Item>
+                <List.Item>
+                  Coordinated with Proffesors to ensure specific concepts and principes were understood properly 
+                </List.Item>
               </List>
             </Timeline.Item>
             <Timeline.Item title="Survey Technician" className={classes.jobTitle}>
@@ -102,12 +108,12 @@ const WorkHistory = () => {
                 Walgreens Pharmacy- Palmview, TX
                 <span style={{ fontStyle: 'normal' }}>October 2016 - May 2020</span>
               </Text>
-              <List size="sm" spacing="xs" center>
+              <List size="sm" spacing="sm" center>
                 <List.Item mt={0}>
                   Utilized propriety software to manage patients{"'"} prescriptions, resolve rejected
                   insurance claims, and scheduled refills for medication
                 </List.Item>
-                <List.Item>
+                <List.Item lh='xs'>
                   Maintained strong attention to detail, making sure all patients received the correct
                   prescription(s); professionally handled confidential patient information
                 </List.Item>
@@ -121,7 +127,6 @@ const WorkHistory = () => {
                 </List.Item>
               </List>
             </Timeline.Item>
-            <Timeline.Item>...</Timeline.Item>
           </Timeline>
         </div>
       </Container>

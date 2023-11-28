@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Paper, Title, TypographyStylesProvider } from "@mantine/core";
+import { Container, Text, Title, TypographyStylesProvider } from "@mantine/core";
 import classes from "./Bio.module.css";
 import { IconBook } from '@tabler/icons-react'
 import { Blockquote } from '@mantine/core';
@@ -10,6 +10,7 @@ const Bio = () => {
   const icon = <IconBook />;
   return (
     <Container size='md' className={classes.wrapper} id='about'>
+      <Text fw={500} ml='xs' mb='md' className={classes.title}>About</Text>
       <Blockquote color="blue" icon={icon} radius='md' className={classes.block} >
         <ScrollArea className={classes.scroll}>
           <TypographyStylesProvider className={classes.textContent}>
@@ -17,9 +18,9 @@ const Bio = () => {
               Hello, my name is John A. Kornegay and this is my 'about me' page.
             </Title>
             <p>
-              In 2016, I graduated from the University of Texas A&M at College Station with a Bachelor's of Science in Molecular and Cell Biology. After graduation, I attempted to utilize my
-              degree in various ways: applying to jobs requiring a Biology degree, working as a pharmacy technician, retaking courses to apply to a graduate program/ medical school, taking EMT courses to shore up my resume. Having never heard
-              of the 'sunken cost fallacy' I kept trudging along.
+              I am a 2016 graduate from Texas A&M University
+              with a Bachelors of Science in Biology. After graduating I spent 4 years working as a pharmacy technician with the goal of attending pharmacy school. 
+              
               <br />
 
               However, deep down I knew this was not

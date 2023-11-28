@@ -1,22 +1,21 @@
-import { Container, Group, Text, rem, useMantineColorScheme, ThemeIcon } from '@mantine/core';
+import { Container, Group, rem, useMantineColorScheme } from '@mantine/core';
 import { NavLink } from 'react-router-dom';
 import classes from './Header.module.css';
 import { ColorSchemeToggle } from '../ColorSchemeToggle';
-import { IconHome2, IconBriefcase, IconClipboardList, IconUser, IconAlien, IconBrandGithub, IconCertificate, IconBrandReact } from '@tabler/icons-react';
+import { IconHome2, IconBrandInstagram, IconBrandGithub, IconBrandLinkedin, IconBrandReact } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 
+
 const styles = {
-  width: rem(20),
-  height: rem(20),
+  width: rem(18),
+  height: rem(18),
 }
 
 const navData = [
-  { icon: <IconHome2 style={styles} stroke={1.7} />, label: 'Home' },
-  { icon: <IconBriefcase style={styles} stroke={1.7} />, label: 'Projects' },
-  { icon: <IconClipboardList style={styles} stroke={1.7} />, label: 'Resume' },
-  { icon: <IconUser style={styles} stroke={1.7} />, label: 'About' },
-  { icon: <IconAlien style={styles} stroke={1.7} />, label: 'Aliens' },
-  { icon: <IconBrandGithub style={styles} stroke={1.7} />, label: 'Github' }
+  { icon: <IconHome2 style={styles} stroke={1.7} />, label: 'Home', to: '/' },
+  { icon: <IconBrandInstagram  style={styles} stroke={1.7} />, label: 'Instagram', to: 'https://www.instagram.com/johnathew_k/' },
+  { icon: <IconBrandLinkedin style={styles} stroke={1.7} />, label: 'LinkedIn', to: 'https://linkedin.com/in/john-kornegay-00541411b' },
+  { icon: <IconBrandGithub style={styles} stroke={1.7} />, label: 'Github', to: 'https://github.com/johnathew' }
 ];
 export function Header({ toggle }: { toggle: () => void }) {
 
@@ -25,6 +24,7 @@ export function Header({ toggle }: { toggle: () => void }) {
   const clickHandler = () => {
     toggle()
   }
+  
   const items = navData.map((link) => (
     <motion.div key={link.label} whileHover={{
       scale: 1.2,
@@ -34,7 +34,7 @@ export function Header({ toggle }: { toggle: () => void }) {
     }} style={{ borderRadius: '10px' }} >
       <NavLink
         key={link.label}
-        to={link.label.toLowerCase() === 'home' ? '/' : `/${link.label.toLowerCase()}`}
+        to={link.to}
         className={classes.link}
         style={({ isActive }) => ({ backgroundColor: isActive ? 'var(--mantine-color-orange-2)' : '' })}
         onClick={clickHandler}
@@ -48,11 +48,11 @@ export function Header({ toggle }: { toggle: () => void }) {
 
   return (
     <Container fluid size="md" className={classes.inner}>
-      <IconBrandReact stroke={1.5} />
-      <Group gap={5} visibleFrom="xs" className={classes.group}>
+      <IconBrandReact stroke={1.7} />
+      <Group gap={5} className={classes.group}>
         {items}
-      </Group>
       <ColorSchemeToggle />
+      </Group>
     </Container>
   );
 }
