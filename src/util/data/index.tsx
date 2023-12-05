@@ -1,6 +1,6 @@
 import { rem, Image } from "@mantine/core";
 import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconBrandSpotify, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5 } from "@tabler/icons-react";
-import rrDark from '/rrDARKK.svg';
+import rrDark from '/rrDark.svg';
 import rrLight from '/rrLight.svg';
 import reactQuery from '/reactQuery.svg';
 

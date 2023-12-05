@@ -1,5 +1,4 @@
 import { Hero } from '../components/Hero';
-
 import WorkHistory from '../components/WorkHistory';
 import Bio from '../components/Bio';
 import { Projects } from '../components/Projects';

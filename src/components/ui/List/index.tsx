@@ -1,5 +1,5 @@
 import { List, ThemeIcon, rem } from "@mantine/core";
-import { IconBook2, IconBarbell, IconFocus, IconStar } from "@tabler/icons-react";
+import { IconBook2, IconBarbell, IconFocus } from "@tabler/icons-react";
 import classes from "./HeroList.module.css";
 
 const styles = {

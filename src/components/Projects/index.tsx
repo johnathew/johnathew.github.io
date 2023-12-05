@@ -88,4 +88,3 @@ export function Projects() {
 }
 
 
-//TODO: add badges to cards, add links to cards, add animations to cards

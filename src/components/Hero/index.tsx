@@ -14,7 +14,6 @@ import { IconDownload, IconSchool } from '@tabler/icons-react';
 import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
 import resumePic from '/profilePic.png';
-
 import Contact from '../Contact';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
