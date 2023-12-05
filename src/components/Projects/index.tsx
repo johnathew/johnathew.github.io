@@ -17,8 +17,6 @@ export function Projects() {
   const ref = useRef(null)
   const control = useAnimation()
   const inView = useInView(ref)
-  const { colorScheme } = useMantineColorScheme();
-
 
   useEffect(() => {
     if (inView) {

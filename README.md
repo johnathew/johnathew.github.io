@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d28b38e3-7906-4976-be75-9bf274c89b81/deploy-status)](https://app.netlify.com/sites/jaksresume/deploys)
+
+
 # Mantine Vite template
 
 ## Features
