@@ -144,3 +144,9 @@
   color: light-dark(var(--mantine-color-black), var(--mantine-color-orange-2));
 
 }
+
+.control {
+  &:hover {
+    box-shadow: var(--mantine-shadow-xl);
+  }
+}

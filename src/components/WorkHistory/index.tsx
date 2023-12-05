@@ -2,11 +2,12 @@ import { Timeline, Text, Container, List, Divider } from '@mantine/core';
 import classes from './WorkHistory.module.css';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
+import Title from '../ui/Title';
 import { useMantineColorScheme } from '@mantine/core';
+
 
 const WorkHistory = () => {
 
-  const { colorScheme } = useMantineColorScheme();
   const boxVariant = {
     visible: { opacity: 1 },
     hidden: { opacity: 0, },
@@ -15,7 +16,8 @@ const WorkHistory = () => {
   const ref = useRef(null)
   const control = useAnimation()
   const inView = useInView(ref)
-
+  const { colorScheme } = useMantineColorScheme();
+  const color = colorScheme === 'dark' ? 'var(--mantine-color-orange-2)' : 'var(--mantine-color-blue-5)';
   useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -32,16 +34,16 @@ const WorkHistory = () => {
       ref={ref}
       transition={{ type: 'spring', duration: 0.7 }}>
       <Container size='md' id='work' p='md'>
-        <Text fw={500} className={classes.title}>Work History</Text>
+        <Title title="Work History" />
         <div className={classes.wrapper}>
-          <Timeline radius="md" active={3} lineWidth={2} bulletSize={12}>
+          <Timeline radius="md" active={3} lineWidth={2} bulletSize={12} color={color}>
             <Timeline.Item title="Helpdesk Specialist" className={classes.jobTitle}>
               <Divider mb="xs" />
               <Text size="xs" className={classes.locHistory}>
                 Maximus Federal - Remote; McAllen, TX
                 <span style={{ fontStyle: 'normal' }}> 2021 - Present </span>
               </Text>
-              <List size="sm" spacing="xs" center >
+              <List size="sm" spacing="xs" center className={classes.list}>
                 <List.Item>
                   Troubleshoot official CDC software related issues for healthcare professionals and
                   the public.
@@ -66,7 +68,7 @@ const WorkHistory = () => {
                 University of Texas Rio Grande Valley - Remote; Edinburg, TX
                 <span style={{ fontStyle: 'normal' }}> Spring 2021</span>
               </Text>
-              <List size="sm" spacing="xs" center>
+              <List size="sm" spacing="xs" center className={classes.list}>
                 <List.Item mt={0}>
                   Assisted undergraduate Chemistry students with course material, holding weekly Q&A
                   sessions
@@ -78,7 +80,7 @@ const WorkHistory = () => {
                   Graded homework assignments and exams, providing feedback to students
                 </List.Item>
                 <List.Item>
-                  Coordinated with Proffesors to ensure specific concepts and principes were understood properly 
+                  Coordinated with Proffesors to ensure specific concepts and principes were understood properly
                 </List.Item>
               </List>
             </Timeline.Item>
@@ -88,7 +90,7 @@ const WorkHistory = () => {
                 SAMES, Inc. - McAllen, TX
                 <span style={{ fontStyle: 'normal' }}> October 2021 - December 2021</span>
               </Text>
-              <List size="sm" spacing="xs" center>
+              <List size="sm" spacing="xs" center className={classes.list}>
                 <List.Item mt={0}>
                   Mapped out boundaries for businesses and residential homes using GPS technology
                 </List.Item>
@@ -108,7 +110,7 @@ const WorkHistory = () => {
                 Walgreens Pharmacy- Palmview, TX
                 <span style={{ fontStyle: 'normal' }}>October 2016 - May 2020</span>
               </Text>
-              <List size="sm" spacing="sm" center>
+              <List size="sm" spacing="xs" center className={classes.list}>
                 <List.Item mt={0}>
                   Utilized propriety software to manage patients{"'"} prescriptions, resolve rejected
                   insurance claims, and scheduled refills for medication
@@ -121,7 +123,7 @@ const WorkHistory = () => {
                   Provided excellent customer service, assisting patients with questions and concerns
                   regarding their prescriptions
                 </List.Item>
-                <List.Item>
+                <List.Item mb="xs">
                   Collaborated with other pharmacy technicians to ensure all prescriptions were filled
                   in a timely manner
                 </List.Item>

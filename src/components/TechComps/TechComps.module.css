@@ -1,0 +1,13 @@
+.techComps {
+    border-radius: var(--mantine-radius-md);
+    margin-bottom: rem(10px);
+    scale: 0.93;
+    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-body));
+    box-shadow: var(--mantine-shadow-sm);
+    
+    @media (max-width: $mantine-breakpoint-xs) {
+        scale: 1;
+        margin-bottom: rem(20px);
+        padding: var(--mantine-spacing-sm);
+    }
+}

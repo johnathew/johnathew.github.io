@@ -4,6 +4,7 @@ import WorkHistory from '../components/WorkHistory';
 import Bio from '../components/Bio';
 import { Projects } from '../components/Projects';
 import { Divider } from '@mantine/core';
+import TechComps from '../components/TechComps';
 
 export function HomePage() {
 
@@ -16,6 +17,9 @@ export function HomePage() {
       <Divider />
       <Projects />
       <Divider />
+      <TechComps />
+      <Divider />
+      <Bio />
     </>
   );
 }

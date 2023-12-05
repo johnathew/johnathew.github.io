@@ -5,14 +5,14 @@ import classes from './RootLayout.module.css';
 import {Outlet } from 'react-router-dom';
 
 const RootLayout = () => {
-  const [opened, { toggle }] = useDisclosure(); 
+
   return (
     <AppShell
       className={classes.root}
       header={{ height: 'auto' }}
     >
       <AppShell.Header className={classes.header}>
-        <Header toggle={toggle} />
+        <Header />
       </AppShell.Header>
       <AppShell.Main className={classes.content}>
         <Outlet />

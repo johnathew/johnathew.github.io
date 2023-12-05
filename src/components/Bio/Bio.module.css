@@ -1,16 +1,22 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+
   @media( max-width: $mantine-breakpoint-xs) {
     max-width: max-content;
     margin:0;
     padding:0;
+    scale:1;
   }
 }
 
 .block {
   padding: var(--mantine-spacing-lg);
-  margin: var(--mantine-spacing-lg);
+  margin: var(--mantine-spacing-xl);
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .scroll {

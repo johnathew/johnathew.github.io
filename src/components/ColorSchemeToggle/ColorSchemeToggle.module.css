@@ -1,6 +1,8 @@
 .icon {
     width: rem(20);
     height: rem(20);
+    border-radius: 10px;
+
   }
   
   
