@@ -46,7 +46,7 @@ export const projects = [
         tooltipGH: 'Github Repository',
         tooltipExt: 'Live Demo',
         to: 'https://github.com/johnathew/spotify_project',
-        extLink: 'https://deluxe-cascaron-d7a13a.netlify.app/'
+        extLink: 'https://profound-buttercream-a93712.netlify.app'
 
     },
     {
