@@ -1,28 +1,27 @@
 
-.wrapper {
-  scale: 0.90;
-  @media (max-width: $mantine-breakpoint-sm) {
-    min-width: rem(300px);
-    padding-left:0;
-    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-    margin-right: calc(var(--mantine-spacing-sm) * 3);
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-  }
 
-  @media (max-width: $mantine-breakpoint-xs) {
-    margin: 0;
-    padding: 0;
-    scale:1;
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: calc(var(--mantine-spacing-lg) * 3);
+  @media(max-width: $mantine-breakpoint-xs){
+ padding: calc(var(--mantine-spacing-lg) * 1);
   }
 }
+.grid {
+  margin-top: calc(var(--mantine-spacing-xl) * 1);
+  @media (max-width: $mantine-breakpoint-xs) {
+    margin-top:0;
+  }
+}
+
 
    .card {
     position: relative;
     overflow: hidden;
     transition: transform 150ms ease, box-shadow 100ms ease;
-    padding: var(--mantine-spacing-md);
+    padding: var(--mantine-spacing-lg);
     padding-left: calc(var(--mantine-spacing-xl) * 1);
     max-height: fit-content;
     min-width: rem(300px);
@@ -59,6 +58,21 @@
 
 }
 
+.cardTitle {
+  font-size: var(--mantine-font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--mantine-spacing-xs);
+  margin-top: var(--mantine-spacing-xs);
+  text-align: center;
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-bottom: var(--mantine-spacing-xs);
+    margin-top: var(--mantine-spacing-xs);
+  }
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-font-size-md);
+  }
+
+}
 .control {
   padding: var(--mantine-spacing-xs);
   border-radius: var(--mantine-radius-md);
@@ -69,4 +83,7 @@
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   background-color: light-dark(var(--mantine-color-), var(--mantine-color-dark-8));
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding: var(--mantine-spacing-xs);
+  }
 }

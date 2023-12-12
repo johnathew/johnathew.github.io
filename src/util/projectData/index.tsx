@@ -1,5 +1,5 @@
 import { rem, Image } from "@mantine/core";
-import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconBrandSpotify, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5 } from "@tabler/icons-react";
+import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconBrandSpotify, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5 } from "@tabler/icons-react";
 import rrDark from '/rrDark.svg';
 import rrLight from '/rrLight.svg';
 import reactQuery from '/reactQuery.svg';
@@ -21,7 +21,7 @@ export const projects = [
         extLink: 'https://johnspokedex.netlify.app/'
     },
     {
-        title: 'Github Repository Search',
+        title: 'Github Repo Search',
         icon: <IconFileSearch style={{ width: rem(32), height: rem(32), color: 'var(--mantine-color-indigo-8' }} />,
         ghLink: <IconCode stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-blue-6' }} />,
         extLinkIcon: <IconExternalLink stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-orange-4' }} />,
@@ -41,7 +41,7 @@ export const projects = [
         extLinkIcon: <IconExternalLink stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-orange-4' }} />,
         image:
             'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-        description: 'Project made utilizing the Spotify API, involving PKCE authentication, and the ability to create, edit, and delete playlists.',
+        description: 'Project made utilizing the Spotify API, PKCE authentication, and the ability to edit and create playlists.',
         utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Spotify API' }, { tech: 'Tailwind' }, { tech: 'ReactQuery' }, { tech: 'PKCE Authentication' }],
         tooltipGH: 'Github Repository',
         tooltipExt: 'Live Demo',
@@ -57,7 +57,7 @@ export const projects = [
         image:
             'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
         description: 'The current resume I am using to apply for jobs. Made with React and Typescript.',
-        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Framer Motion' }, { tech: 'React Router' }, { tech: 'Tailwind' }, { tech: 'MantineUI' }],
+        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Framer Motion' }, { tech: 'React Router' }, { tech: 'MantineUI' }],
         tooltipGH: 'Github Repository',
         tooltipExt: 'You are here!',
         to: 'https://github.com/johnathew/resume_JAK',
@@ -66,17 +66,6 @@ export const projects = [
 ];
 
 
-
-const styles = {
-    width: rem(20),
-    height: rem(20),
-}
-
-export const navData = [
-    { icon: <IconBrandInstagram style={styles} stroke={1.7} />, label: 'Instagram', to: 'https://www.instagram.com/johnathew_k/' },
-    { icon: <IconBrandLinkedin style={styles} stroke={1.7} />, label: 'LinkedIn', to: 'https://linkedin.com/in/john-kornegay-00541411b' },
-    { icon: <IconBrandGithub style={styles} stroke={1.7} />, label: 'Github', to: 'https://github.com/johnathew' }
-];
 
 export const techBadgesData = [
     { tech: 'React', badge: <IconBrandReact stroke={1.7} />, color: 'var(--mantine-color-blue-6)' },
@@ -88,3 +77,9 @@ export const techBadgesData = [
     { tech: 'React Router', badgeLight: <Image src={rrLight} w={'24px'} />, badgeDark: <Image src={rrDark} w={'24px'} /> },
     { tech: 'React Query', badge: <Image src={reactQuery} w={'24px'} />, },
 ]
+
+
+export const boxVariant = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0, },
+  }

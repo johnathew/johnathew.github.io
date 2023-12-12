@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export function ColorSchemeToggle() {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+  const computedColorScheme = useComputedColorScheme('dark', { getInitialValueInEffect: true });
 
   return (
     <Group justify="center">
@@ -14,9 +14,8 @@ export function ColorSchemeToggle() {
         scale: 1.2,
         transition: { type: 'ease', stiffness: 500, },
         backgroundColor: colorScheme === 'dark' ? 'var(--mantine-color-gray-7)' : 'var(--mantine-color-orange-2)',
-        opacity: 0.8,
         borderRadius: '20px'
-      }} style={{ borderRadius: '10px' }} >
+      }} style={{ borderRadius: '20px' }} >
         <ActionIcon
           component='button'
           onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
@@ -25,8 +24,8 @@ export function ColorSchemeToggle() {
           size="md"
           aria-label='Toggle color scheme'
         >
-          <IconMoonStars className={cx(classes.icon, classes.dark)} stroke={1.7} />
-          <IconSun className={cx(classes.icon, classes.light)} stroke={1.7} />
+          <IconMoonStars className={cx(classes.icon, classes.dark)} stroke={1.3} />
+          <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
         </ActionIcon>
       </motion.div>
     </Group >

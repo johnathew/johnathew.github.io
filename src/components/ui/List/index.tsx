@@ -3,8 +3,8 @@ import { IconBook2, IconBarbell, IconFocus } from "@tabler/icons-react";
 import classes from "./HeroList.module.css";
 
 const styles = {
-  width: rem(12),
-  height: rem(12),
+  width: rem(15),
+  height: rem(15),
 }
 
 

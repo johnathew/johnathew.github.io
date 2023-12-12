@@ -2,7 +2,7 @@ import { SimpleGrid, Text, Container, Paper, Badge, Group, useMantineColorScheme
 import classes from './Projects.module.css';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
-import { projects } from '../../util/data';
+import { projects } from '../../util/projectData';
 import { Link } from 'react-router-dom';
 import Title from '../ui/Title';
 
@@ -33,7 +33,7 @@ export function Projects() {
       <Group justify='space-between'>
         <Group>
           {article.icon}
-          <Text size="xl" fw={500}>
+          <Text className={classes.cardTitle}>
             {article.title}
           </Text>
         </Group>
@@ -50,7 +50,7 @@ export function Projects() {
           <Link to={article.extLink}>
             <Tooltip label={article.tooltipExt} events={{ hover: true, focus: true, touch: false }}>
               <motion.div whileHover={{ scale: 1.5, transition: { type: 'ease', } }}>
-                  {article.extLinkIcon}
+                {article.extLinkIcon}
               </motion.div>
             </Tooltip>
           </Link>
@@ -60,11 +60,11 @@ export function Projects() {
         {article.description}
       </Text>
       <Group gap='xs'>
-      {article.utilizes.map((technology) => (
-        <Badge key={technology.tech} variant='light' className={classes.icon}>
-          {technology.tech}
-        </Badge>  
-      ))}
+        {article.utilizes.map((technology) => (
+          <Badge key={technology.tech} variant='light' className={classes.icon}>
+            {technology.tech}
+          </Badge>
+        ))}
       </Group>
     </Paper >
   ));
@@ -74,12 +74,10 @@ export function Projects() {
     <motion.div variants={boxVariant}
       initial="hidden"
       animate={control}
-      transition={{ type: 'spring', duration: 0.7 }}>
-      <Container p='md' id='projects'>
-       <Title title="Projects"/>
-        <div className={classes.wrapper}>
-          <SimpleGrid ref={ref} cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
-        </div>
+      transition={{ type: 'ease', duration: 0.6 }}>
+      <Container id='projects' className={classes.mainWrapper}>
+        <Title title="Projects" />
+        <SimpleGrid className={classes.grid} ref={ref} cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
       </Container>
     </motion.div>
   );

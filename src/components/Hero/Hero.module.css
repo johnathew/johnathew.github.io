@@ -7,11 +7,13 @@
   margin-top: rem(10px);
   margin-bottom: rem(10px);
   @media(max-width: $mantine-breakpoint-xs){
-    scale: 1;
+    scale: 0.95;
     margin-top: rem(40px);
   }
 
 }
+
+
 
 .mainInfo{ 
   min-width: rem(300px);
@@ -22,6 +24,7 @@
   padding-bottom: var(--mantine-spacing-lg);
   @max-width: $mantine-breakpoint-sm {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -31,6 +34,7 @@
   align-items: center;
     justify-content: center;
   min-width: rem(300px);
+
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;
     align-items: center;
@@ -46,7 +50,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--mantine-color-body);
-  border-radius: var(--mantine-radius-xs);
+  border-radius: var(--mantine-radius-md);
   padding: rem(10px);
   border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
   box-shadow: var(--mantine-shadow-sm);
@@ -96,7 +100,7 @@
 }
 
 .goal {
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-orange-2));
+  color: light-dark(var(--mantine-color-blue-7), var(--mantine-color-orange-2));
   font-family: Greycliff CF, var(--mantine-font-family);
   font-size: rem(20px);
   opacity: 0.8;
@@ -108,11 +112,11 @@
 .image {
   width: 100%;
   max-height: rem(200px);
-  
   border-radius: calc(var(--mantine-radius-sm) * 2);
-  border: var(--mantine-spacing-xs) solid var(--mantine-color-gray-1);
+  box-shadow: var(--mantine-shadow-sm);
+  border: rem(1px) solid light-dark(var(--mantine-color-blue-9), var(--mantine-color-blue-3));
   @media (max-width: $mantine-breakpoint-xs) {
-    padding: rem(10px);
+    padding: rem(2px);
     border-radius: calc(var(--mantine-radius-md) * 2);
   }
 } 

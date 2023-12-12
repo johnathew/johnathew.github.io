@@ -16,23 +16,17 @@ import classes from './Hero.module.css';
 import resumePic from '/profilePic.png';
 import Contact from '../Contact';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef , forwardRef, Ref} from 'react';
 import HeroList from '../ui/List';
+import { boxVariant } from '../../util/projectData';
 
 
-
-const boxVariant = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0, },
-}
 const styles = {
-  width: rem(12),
-  height: rem(12),
+  width: rem(15),
+  height: rem(15),
 }
 
-
-export function Hero() {
-
+const Hero = () => {
   const ref = useRef(null)
   const control = useAnimation()
   const inView = useInView(ref)
@@ -50,29 +44,25 @@ export function Hero() {
     <motion.div variants={boxVariant}
       initial="hidden"
       animate={control}
-      transition={{ type: 'ease', duration: 0.8 }}
-
+      transition={{ type: 'ease', duration: 0.5 }}
     >
       <Container className={classes.mainContainer} id='home' ref={ref}>
         <Stack className={classes.mainInfo} >
           <Title className={classes.title} id='home'>
             John A. Kornegay
           </Title>
-          <Text className={classes.goal}>
+          <Title className={classes.goal}>
             Frontend Developer
-          </Text>
-          <Text className={classes.objective} >
-            <b>Objective</b>: A highly motivated individual seeking an internship opportunity to gain experience in the field of web development.
+          </Title>
+          <Text className={classes.objective} ta='center' >
+            <b>Objective</b>: A highly motivated individual seeking an internship opportunity to gain experience as a frontend developer.
           </Text>
         </Stack>
         <div className={classes.inner}
         >
           <Stack className={classes.wrapper}
           >
-            <motion.div variants={{
-              hidden: { opacity: 0.3 },
-              visible: { opacity: 1 }
-            }} transition={{ type: 'ease', }}>
+            <motion.div variants={boxVariant} transition={{ type: 'ease', }}>
               <Image src={resumePic} className={classes.image} fallbackSrc='https://placehold.co/400x400?text=:)' alt="headshot photo" />
             </motion.div>
             <div className={classes.contacts} >
@@ -94,12 +84,12 @@ export function Hero() {
                 <b>Bachelor of Science in Molecular and Cell Biology</b> – <span>Graduation: 2016</span> <br />
                 University of Texas A&M  - College Station, TX
               </List.Item>
-         
+
               <Text fw={300} mb='xs' className={classes.locHistory}>
-            
+
               </Text>
             </List>
-            <Text className={classes.banner}>Features</Text>
+            <Text className={classes.banner}>Feats</Text>
             <Divider mb='md' />
             <HeroList />
             <Group mt={30}>
@@ -117,7 +107,6 @@ export function Hero() {
               </motion.div>
             </Group>
           </div>
-
         </div>
       </Container>
     </motion.div >
@@ -125,5 +114,5 @@ export function Hero() {
   );
 }
 
-
-// TODO: add button icon to download button
+export default Hero;
+// TODO: add link to download resume PDF

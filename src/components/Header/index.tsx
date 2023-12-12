@@ -4,22 +4,20 @@ import classes from './Header.module.css';
 import { ColorSchemeToggle } from '../ColorSchemeToggle';
 import { IconBrandReact } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
-import { navData } from '../../util/data';
+import { navData } from '../../util/navData';
 
 
 export function Header() {
 
   const { colorScheme } = useMantineColorScheme();
 
-
   const items = navData.map((link) => (
     <motion.div key={link.label} whileHover={{
       scale: 1.2,
-      transition: { type: 'ease', stiffness: 500, },
+      transition: { type: 'ease', stiffness: 500 },
       backgroundColor: colorScheme === 'dark' ? 'var(--mantine-color-gray-7)' : 'var(--mantine-color-orange-2)',
-      opacity: 0.8,
       borderRadius: '20px'
-    }} style={{ borderRadius: '10px' }} >
+    }} style={{ borderRadius: '20px' }}>
       <NavLink
         key={link.label}
         to={link.to}
@@ -31,9 +29,8 @@ export function Header() {
 
   ));
 
-
   return (
-    <Container  className={classes.inner}>
+    <Container className={classes.inner}>
       <IconBrandReact stroke={1.6} />
       <Group gap={5} className={classes.group}>
         {items}

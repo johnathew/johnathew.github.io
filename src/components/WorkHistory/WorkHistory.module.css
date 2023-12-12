@@ -1,54 +1,28 @@
-.wrapper {
+
+
+.mainWrapper {
   display: flex;
-  scale: 0.92;
-  font-family: 'Greycliff CF', var(--mantine-font-family);
-  @media (max-width: $mantine-breakpoint-sm) {
-    min-width: rem(300px);
-    padding-left:0;
-    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-    margin-right: calc(var(--mantine-spacing-sm) * 3);
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-  }
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    margin: 0;
-    padding: 0;
-    scale:1;
-  }
-}
-.title {
-  font-weight: bold;
-  font-size: var(--mantine-font-size-xl);
-  margin-left: calc(var(--mantine-spacing-md) * 3);
-  margin-top: var(--mantine-spacing-xs);
-  color:light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  @media (max-width: $mantine-breakpoint-xs) {
-    margin-left: calc(var(--mantine-spacing-md) * 1);
-    font-size: var(--mantine-font-size-xl);
-    margin-bottom: calc(var(--mantine-spacing-xs) * 2);
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline: calc(var(--mantine-spacing-lg) * 3);
+  padding-top: calc(var(--mantine-spacing-lg) * 2);
+  @media(max-width: $mantine-breakpoint-xs){
+ padding: calc(var(--mantine-spacing-lg) * 1);
   }
 }
 
-.jobTitle {
-
-  font-family: Greycliff CF, var(--mantine-font-family);
-  font-size:  rem(14px);
-
+.timeLine {
+  margin-top: calc(var(--mantine-spacing-xl) * 1);
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: rem(18px);
+    margin-top:0;
   }
 }
+
 
 .list {
-
-  font-family: Greycliff CF, var(--mantine-font-family);
   @media (max-width: $mantine-breakpoint-xs) {
-  font-family: 'Greycliff CF', var(--mantine-font-family);
-  font-size: rem(13.5px);
-  letter-spacing: 0.2px;
-
+  font-size: rem(13px);
+  
   }
 
 }

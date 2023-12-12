@@ -1,13 +1,22 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: calc(var(--mantine-spacing-lg) * 3);
+    @media(max-width: $mantine-breakpoint-xs){
+   padding: calc(var(--mantine-spacing-lg) * 1);
+    }
+  }
+
+
 .techComps {
     border-radius: var(--mantine-radius-md);
-    margin-bottom: rem(10px);
-    scale: 0.93;
+    width: 100%;
     background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-body));
     box-shadow: var(--mantine-shadow-sm);
-    
+    padding: var(--mantine-spacing-xl);
     @media (max-width: $mantine-breakpoint-xs) {
-        scale: 1;
-        margin-bottom: rem(20px);
-        padding: var(--mantine-spacing-sm);
+        padding: var(--mantine-spacing-xl);
     }
 }
+

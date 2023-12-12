@@ -1,4 +1,4 @@
-import { Hero } from '../components/Hero';
+import Hero from '../components/Hero';
 import WorkHistory from '../components/WorkHistory';
 import Bio from '../components/Bio';
 import { Projects } from '../components/Projects';
@@ -11,13 +11,10 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <Divider />
+      <Divider mt='xl' />
       <WorkHistory />
-      <Divider />
       <Projects />
-      <Divider />
       <TechComps />
-      <Divider />
       <Bio />
     </>
   );
