@@ -1,8 +1,7 @@
-import { Text } from "@mantine/core";
 import classes from './workData.module.css';
 
 const styles = {
-    fontSize: '14px', marginLeft: '4px', opacity: 0.8
+    fontSize: '12px', marginLeft: '4px', opacity: 0.78
 }
 
 const jobContent = [
@@ -27,8 +26,8 @@ const jobContent = [
 
 export const titleContent = jobContent.map((title) => {
     return (
-        <Text size="lg" key={title.name} className={classes.title}>{title.name}
+        <p key={title.name} className={classes.title}>{title.name}
             <span style={styles}>{' '}{title.date} </span>
-        </Text>)
+        </p>)
 }
 )

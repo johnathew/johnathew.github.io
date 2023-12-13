@@ -4,15 +4,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-inline: calc(var(--mantine-spacing-lg) * 3);
-  padding-top: calc(var(--mantine-spacing-lg) * 2);
+  padding-left: calc(var(--mantine-spacing-lg) * 3);
+  padding-right: calc(var(--mantine-spacing-lg) * 3);
+  padding-top: calc(var(--mantine-spacing-lg) * 1);
   @media(max-width: $mantine-breakpoint-xs){
- padding: calc(var(--mantine-spacing-lg) * 1);
+    padding-top: 0;
+    padding-inline: 0;
+    scale: 0.95;
   }
 }
 
 .timeLine {
-  margin-top: calc(var(--mantine-spacing-xl) * 1);
+  margin-top: var(--mantine-spacing-sm);
   @media (max-width: $mantine-breakpoint-xs) {
     margin-top:0;
   }
@@ -20,6 +23,10 @@
 
 
 .list {
+  font-size: 13px;
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-weight: 300;
+  margin-right: var(--mantine-spacing-md);
   @media (max-width: $mantine-breakpoint-xs) {
   font-size: rem(13px);
   

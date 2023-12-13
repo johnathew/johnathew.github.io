@@ -6,7 +6,8 @@
   align-items: flex-start;
   padding: calc(var(--mantine-spacing-lg) * 3);
   @media(max-width: $mantine-breakpoint-xs){
- padding: calc(var(--mantine-spacing-lg) * 1);
+    padding:0;
+    scale: 0.95;
   }
 }
 .grid {
@@ -20,6 +21,10 @@
    .card {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+
     transition: transform 150ms ease, box-shadow 100ms ease;
     padding: var(--mantine-spacing-lg);
     padding-left: calc(var(--mantine-spacing-xl) * 1);
@@ -50,16 +55,21 @@
         var(--mantine-color-orange-5)
       ));
     }
+
+    @media (max-width: $mantine-breakpoint-xs) {
+      padding: var(--mantine-spacing-lg);
+      min-width: rem(300px);
+      
+    }
   }
 
 
 .icon {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-orange-2));
-
 }
 
 .cardTitle {
-  font-size: var(--mantine-font-size-lg);
+  font-size: var(--mantine-font-size-md);
   font-weight: 600;
   margin-bottom: var(--mantine-spacing-xs);
   margin-top: var(--mantine-spacing-xs);
@@ -77,6 +87,8 @@
   padding: var(--mantine-spacing-xs);
   border-radius: var(--mantine-radius-md);
   gap: 8px;
+  width: auto;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;

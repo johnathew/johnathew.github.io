@@ -42,7 +42,7 @@ export const projects = [
         image:
             'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
         description: 'Project made utilizing the Spotify API, PKCE authentication, and the ability to edit and create playlists.',
-        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Spotify API' }, { tech: 'Tailwind' }, { tech: 'ReactQuery' }, { tech: 'PKCE Authentication' }],
+        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Spotify API' }, { tech: 'Tailwind' }, { tech: 'ReactQuery' }, { tech: 'PKCE Auth.' }],
         tooltipGH: 'Github Repository',
         tooltipExt: 'Live Demo',
         to: 'https://github.com/johnathew/spotify_project',
@@ -56,7 +56,7 @@ export const projects = [
         extLinkIcon: <IconExternalLink stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-orange-4' }} />,
         image:
             'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-        description: 'The current resume I am using to apply for jobs. Made with React and Typescript.',
+        description: 'The current resume I am using to apply for jobs, also the site you are currently viewing. Made with React, Typescript, and Mantine UI.',
         utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Framer Motion' }, { tech: 'React Router' }, { tech: 'MantineUI' }],
         tooltipGH: 'Github Repository',
         tooltipExt: 'You are here!',

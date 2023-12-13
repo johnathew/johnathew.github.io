@@ -6,22 +6,24 @@
   padding-inline: calc(var(--mantine-spacing-lg) * 3);
   padding-top: calc(var(--mantine-spacing-lg) * 2);
   width: 100%;
+  padding-bottom: calc(var(--mantine-spacing-lg) * 2);
   @media(max-width: $mantine-breakpoint-xs){
  padding: calc(var(--mantine-spacing-lg) * 1);
   }
 }
 
-.block {
+.blockQuote {
   margin-top: calc(var(--mantine-spacing-xl) * 1);
+  font-size: var(--mantine-font-size-sm);
+  line-height: 2;
   @media (max-width: $mantine-breakpoint-xs) {
     margin-top:0;
   }
 }
 
-
 .textContent {
   font-family: Greycliff CF, var(--mantine-font-family);
-  font-size: rem(16px);
+  font-size: rem(10px);
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-1));
   
   @media(max-width: $mantine-breakpoint-sm) {

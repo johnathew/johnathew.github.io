@@ -33,7 +33,7 @@ export function Projects() {
       <Group justify='space-between'>
         <Group>
           {article.icon}
-          <Text className={classes.cardTitle}>
+          <Text fw={400} className={classes.cardTitle}>
             {article.title}
           </Text>
         </Group>
@@ -56,7 +56,7 @@ export function Projects() {
           </Link>
         </Box>
       </Group>
-      <Text size="sm" opacity={0.9} mt="sm" mb="xs">
+      <Text size="sm" fw={300} opacity={0.9} mt="sm" mb="xs">
         {article.description}
       </Text>
       <Group gap='xs'>

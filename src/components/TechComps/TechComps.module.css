@@ -12,6 +12,7 @@
 .techComps {
     border-radius: var(--mantine-radius-md);
     width: 100%;
+    margin-top: var(--mantine-spacing-xl);
     background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-body));
     box-shadow: var(--mantine-shadow-sm);
     padding: var(--mantine-spacing-xl);

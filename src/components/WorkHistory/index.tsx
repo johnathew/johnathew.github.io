@@ -31,10 +31,10 @@ const WorkHistory = () => {
     >
       <Container className={classes.mainWrapper} id='work' ref={ref}>
         <Title title="Work History" />
-        <Timeline className={classes.timeLine} active={3} lineWidth={1} bulletSize={10} color={color}>
-          <Timeline.Item title={titleContent[0]} className={classes.jobTitle}>
+        <Timeline className={classes.timeLine} active={3} lineWidth={2} bulletSize={9} color={color}>
+          <Timeline.Item title={titleContent[0]}>
             <Divider color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'} mb="xs" label='Maximus Federal - Remote; McAllen, TX' labelPosition='left' />
-            <List size="sm" spacing="md" center className={classes.list}>
+            <List size="sm" spacing="xs" center className={classes.list}>
               <List.Item lh={1.2}>
                 Troubleshoot official CDC software related issues for healthcare professionals and
                 the public, providing technical support via phone and email
@@ -44,16 +44,16 @@ const WorkHistory = () => {
                 maintained, accurately documenting all troubleshooting steps and resolutions
               </List.Item>
               <List.Item lh={1.3}>
-                Attended training sessions to learn new software and procedures; tasked with dispersing new information to other Helpdesk Specialists
+                Attend training sessions to learn new software and procedures; tasked with dispersing all new information to other Helpdesk Specialists
               </List.Item>
               <List.Item>
-                Collaborate with other Helpdesk Specialists, providing guidance and assistance as needed
+                Monitor and maintain the Salesforce queue to ensure all tickets are closed properly and within the alloted time of the SLA
               </List.Item>
             </List>
           </Timeline.Item>
           <Timeline.Item title={titleContent[1]} className={classes.jobTitle}>
             <Divider size='xs' color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'} mb="xs" label='University of Texas Rio Grande Valley - Remote; Edinburg, TX' labelPosition='left' />
-            <List size="sm" spacing="md" center className={classes.list}>
+            <List size="sm" spacing="sm" center className={classes.list}>
               <List.Item mt={0}>
                 Assisted undergraduate Chemistry students with course material, holding weekly Q&A
                 sessions
@@ -71,9 +71,9 @@ const WorkHistory = () => {
           </Timeline.Item>
           <Timeline.Item title={[titleContent[2]]} className={classes.jobTitle}>
             <Divider size='xs' color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'} mb="xs" label='SAMES, Inc. - McAllen, TX' labelPosition='left' />
-            <List size="sm" spacing="md" center className={classes.list}>
+            <List size="sm" spacing="sm" center className={classes.list}>
               <List.Item mt={0}>
-                Mapped out boundaries for businesses and residential homes using GPS technology
+                Mapped out boundaries for local businesses and residential homes using GPS technology
               </List.Item>
               <List.Item>
                 Provided measurements and layouts for construction projects in both metropolitan and
@@ -87,22 +87,22 @@ const WorkHistory = () => {
           </Timeline.Item>
           <Timeline.Item title={[titleContent[3]]} className={classes.jobTitle}>
             <Divider size='xs' color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'} mb="xs" label='Walgreens Pharmacy- Palmview, TX' labelPosition='left' />
-            <List size="sm" spacing="md" center className={classes.list}>
-              <List.Item mt={0} lh={1.1}>
+            <List size="sm" spacing="sm" center className={classes.list}>
+              <List.Item mt={0} lh={1.2}>
                 Utilized propriety software to manage patients{"'"} prescriptions, resolve rejected
-                insurance claims, and scheduled refills for medication
+                insurance claims, and scheduled refills for maintenance medications
               </List.Item>
-              <List.Item lh={1.1}>
+              <List.Item lh={1.2}>
                 Maintained strong attention to detail, making sure all patients received the correct
                 prescription(s); professionally handled confidential patient information
               </List.Item>
               <List.Item lh={1.1}>
-                Provided excellent customer service, assisting patients with questions and concerns
-                regarding their prescriptions
+                Provided excellent customer service, ensuring each patient was greeted courteously and received their medication
+                in a timely manner 
               </List.Item>
               <List.Item lh={1.1}>
-                Collaborated with other pharmacy technicians to ensure all prescriptions were filled
-                in a timely manner
+                Trained new employees on the use of the pharmacy software and the proper procedures
+                for handling prescriptions
               </List.Item>
             </List>
           </Timeline.Item>
