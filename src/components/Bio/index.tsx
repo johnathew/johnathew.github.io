@@ -7,8 +7,9 @@ import { useRef, useEffect } from "react";
 
 
 const breakStyles = {
-  marginBottom: '0.5rem',
+  marginBottom: '1rem',
   paddingRight: '1rem',
+  
 }
 
 const boxVariant = {
