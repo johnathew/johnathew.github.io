@@ -14,10 +14,18 @@
 
 .blockQuote {
   margin-top: calc(var(--mantine-spacing-xl) * 1);
-  font-size: var(--mantine-font-size-sm);
   line-height: 2;
   @media (max-width: $mantine-breakpoint-xs) {
     margin-top:0;
+    padding: calc(var(--mantine-spacing-sm) * 2);
+    text-align: left;
+  }
+}
+
+
+.head {
+  @media (max-width: $mantine-breakpoint-xs) {
+ font-size: var(--mantine-font-size-xl);
   }
 }
 
