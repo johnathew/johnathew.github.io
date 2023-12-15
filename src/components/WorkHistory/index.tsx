@@ -80,7 +80,7 @@ const WorkHistory = () => {
                 rural areas
               </List.Item>
               <List.Item>
-                Fullfilled boundary surveys requested by homeowners and businesses for refinancing
+                Fulfilled boundary surveys requested by homeowners and businesses for refinancing
                 or design planning
               </List.Item>
             </List>

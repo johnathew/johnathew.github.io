@@ -1,5 +1,6 @@
-import { useRouteError, isRouteErrorResponse } from 'react-router-dom';
-
+import { Container } from '@mantine/core';
+import { useRouteError, isRouteErrorResponse, Link } from 'react-router-dom';
+import classes from './RootBoundary.module.css';
 const RootBoundary = () => {
   const error = useRouteError();
 
@@ -21,7 +22,9 @@ const RootBoundary = () => {
     }
   }
 
-  return <div>Something went wrong</div>;
+  return <Container className={classes.mainError}>
+    Hey, what are you doing here? <Link to=".">Get out of here</Link>
+  </Container>;
 };
 
 export default RootBoundary;

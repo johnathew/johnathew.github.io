@@ -13,12 +13,13 @@ import {
 import { IconDownload, IconSchool } from '@tabler/icons-react';
 import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
-import resumePic from '/profilePic.png';
+import resumePic from '/headshotUTRGV.png';
 import Contact from '../Contact';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import { useEffect, useRef , forwardRef, Ref} from 'react';
+import { useEffect, useRef} from 'react';
 import HeroList from '../ui/List';
 import { boxVariant } from '../../util/projectData';
+import { Link } from 'react-router-dom';
 
 
 const styles = {
@@ -84,9 +85,7 @@ const Hero = () => {
                 <b>Bachelor of Science in Molecular and Cell Biology</b> – <span>Graduation: 2016</span> <br />
                 University of Texas A&M  - College Station, TX
               </List.Item>
-
               <Text fw={300} mb='xs' className={classes.locHistory}>
-
               </Text>
             </List>
             <Text className={classes.banner}>Feats</Text>
@@ -97,12 +96,14 @@ const Hero = () => {
                 scale: 1.1,
                 transition: { type: 'ease' },
               }}>
-                <Button radius="sm" size="xs" className={classes.control} >
-                  Download Resume <IconDownload stroke={3} style={{
-                    width: rem(12),
-                    height: rem(12),
-                    marginLeft: '5px',
-                  }} />
+                <Button radius="sm" size="xs" className={classes.control}>
+                  <Link style={{ textDecoration: 'none', color: 'var(--mantine-color-body)' }} to='https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link' target="_blank" rel="noopener noreferrer">
+                    Download Resume <IconDownload stroke={3} style={{
+                      width: rem(12),
+                      height: rem(12),
+                      marginLeft: '5px',
+                    }} />
+                  </Link>
                 </Button>
               </motion.div>
             </Group>
