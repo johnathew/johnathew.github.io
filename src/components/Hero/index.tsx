@@ -94,10 +94,10 @@ const Hero = () => {
             <Group mt={30}>
               <motion.div whileHover={{
                 scale: 1.1,
-                transition: { type: 'ease' },
+                transition: { type: 'spring' },
               }}>
                 <Button radius="sm" size="xs" className={classes.control}>
-                  <Link style={{ textDecoration: 'none', color: 'var(--mantine-color-body)' }} to='https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link' target="_blank" rel="noopener noreferrer">
+                  <Link style={{ textDecoration: 'none', color: 'var(--mantine-color-gray-1)' }} to='https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link' target="_blank" rel="noopener noreferrer">
                     Download Resume <IconDownload stroke={3} style={{
                       width: rem(12),
                       height: rem(12),
