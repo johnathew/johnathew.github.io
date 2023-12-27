@@ -19,8 +19,8 @@ function ContactIcon({ icon: Icon, description, link, ...others }: ContactIconPr
         <Group>
           <Icon
             style={{
-              width: rem(16),
-              height: rem(16),
+              width: rem(18),
+              height: rem(18),
               color: 'var(--mantine-color-blue-6)',
               marginRight: rem(-5),
             }}
@@ -40,15 +40,7 @@ const contactData = [
 const Contact = () => {
   const items = contactData.map((item, index) => <ContactIcon key={index} {...item} />);
   return (
-    <Paper>
-      <div>
-        <Title order={5} className={classes.title}>
-          Contact Information
-        </Title>
-        <Divider mb="xs" />
-        <Group gap='xs'>{items}</Group>
-      </div>
-    </Paper>
+    <Group gap='xs'>{items}</Group>
   );
 };
 

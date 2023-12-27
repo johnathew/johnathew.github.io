@@ -8,7 +8,7 @@
 .description {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   max-width: rem(300px);
-  font-size: rem(14px);
+  font-size: var(--mantine-font-size-sm);
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;
   }

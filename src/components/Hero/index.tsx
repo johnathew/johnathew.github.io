@@ -13,7 +13,7 @@ import {
 import { IconDownload, IconSchool } from '@tabler/icons-react';
 import { Image } from '@mantine/core';
 import classes from './Hero.module.css';
-import resumePic from '/headshotUTRGV.png';
+import resumePic from '/jak.png';
 import Contact from '../Contact';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef} from 'react';
@@ -70,8 +70,6 @@ const Hero = () => {
               <Contact />
             </div>
           </Stack>
-
-
           <div className={classes.content}>
             <Text className={classes.banner}>Education</Text>
             <Divider mb='xs' />
@@ -91,7 +89,7 @@ const Hero = () => {
             <Text className={classes.banner}>Feats</Text>
             <Divider mb='md' />
             <HeroList />
-            <Group mt={30}>
+            <Group mt={20}>
               <motion.div whileHover={{
                 scale: 1.1,
                 transition: { type: 'spring' },

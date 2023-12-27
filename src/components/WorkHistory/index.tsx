@@ -101,8 +101,8 @@ const WorkHistory = () => {
                 in a timely manner 
               </List.Item>
               <List.Item lh={1.1}>
-                Trained new employees on the use of the pharmacy software and the proper procedures
-                for handling prescriptions
+                Trained new employees on the use of the pharmacy software and proper procedures
+                for handling prescriptions, filling medications, and managing stock inventory
               </List.Item>
             </List>
           </Timeline.Item>
