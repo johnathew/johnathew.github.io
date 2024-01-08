@@ -1,5 +1,5 @@
 import { rem, Image } from "@mantine/core";
-import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconBrandSpotify, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5 } from "@tabler/icons-react";
+import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconBrandSpotify, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5, IconBrandGithub } from "@tabler/icons-react";
 import rrDark from '/rrDark.svg';
 import rrLight from '/rrLight.svg';
 import reactQuery from '/reactQuery.svg';
@@ -74,7 +74,7 @@ export const techBadgesData = [
     { tech: 'HTML', badge: <IconBrandHtml5 stroke={1.7} />, color: 'var(--mantine-color-orange-6)' },
     { tech: 'CSS', badge: <IconBrandCss3 stroke={1.7} />, color: 'var(--mantine-color-blue-4)' },
     { tech: 'NextJS', badge: <IconBrandNextjs stroke={1.7} />, color: 'light-dark(var(--mantine-color-gray-2), (--mantine-color-gray-8)' },
-    { tech: 'React Router', badgeLight: <Image src={rrLight} w={'24px'} />, badgeDark: <Image src={rrDark} w={'24px'} /> },
+    { tech: 'Git', badge: <IconBrandGithub stroke={1.7} />, color: 'light-dark(var(--mantine-color-black), (--mantine-color-white)' },
     { tech: 'React Query', badge: <Image src={reactQuery} w={'24px'} />, },
 ]
 

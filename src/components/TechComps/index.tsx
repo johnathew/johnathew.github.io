@@ -9,7 +9,7 @@ const TechComps = () => {
 
   const badges = techBadgesData.map((badge) => {
     return (
-      <CompBadge key={badge.tech} label={badge.tech} icon={badge.badgeDark === undefined ? badge.badge : colorScheme === 'dark' ? badge.badgeDark : badge.badgeLight} color={badge.color} />
+      <CompBadge key={badge.tech} label={badge.tech} icon={badge.badge}  color={badge.color} />
     )
   });
 
