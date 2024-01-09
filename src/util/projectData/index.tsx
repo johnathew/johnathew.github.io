@@ -27,10 +27,10 @@ export const projects = [
         extLinkIcon: <IconExternalLink stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-orange-4' }} />,
         image:
             'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-        description: 'A simple search engine for Github repositories using the Github API. Made with React and Typescript.',
+        description: 'A simple search engine for Github repositories using the Github API. Made with React, Typescript, and ReactQuery.',
         tooltipGH: 'Github Repository',
         tooltipExt: 'Live Demo',
-        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Github API' }, { tech: 'Tailwind' }],
+        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Github API' }, { tech: 'Tailwind' }, { tech: 'ReactQuery' }],
         to: 'https://github.com/johnathew/github_react_exercise_ts',
         extLink: 'https://deluxe-cascaron-d7a13a.netlify.app/',
     },
