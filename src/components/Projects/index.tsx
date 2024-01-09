@@ -1,4 +1,4 @@
-import { SimpleGrid, Text, Container, Paper, Badge, Group, useMantineColorScheme, ActionIcon, Tooltip, Box } from '@mantine/core';
+import { SimpleGrid, Text, Container, Paper, Badge, Group, useMantineColorScheme, ActionIcon, Tooltip, Box, Divider } from '@mantine/core';
 import classes from './Projects.module.css';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
@@ -33,7 +33,7 @@ export function Projects() {
       <Group justify='space-between'>
         <Group>
           {article.icon}
-          <Text fw={400} className={classes.cardTitle}>
+          <Text className={classes.cardTitle}>
             {article.title}
           </Text>
         </Group>
@@ -41,7 +41,7 @@ export function Projects() {
           <Link to={article.to}>
             <Tooltip label={article.tooltipGH} events={{ hover: true, focus: true, touch: false }}>
               <motion.div whileHover={{ scale: 1.5, transition: { type: 'ease' } }}>
-                <ActionIcon variant='subtle' color='blue' aria-label='Github link'>
+                <ActionIcon variant='transparent' color='blue' aria-label='Github link'>
                   {article.ghLink}
                 </ActionIcon>
               </motion.div>
@@ -56,6 +56,7 @@ export function Projects() {
           </Link>
         </Box>
       </Group>
+      <Divider mt={10} />
       <Text size="sm" fw={300} opacity={0.9} mt="sm" mb="xs">
         {article.description}
       </Text>

@@ -70,7 +70,7 @@
 
 .cardTitle {
   font-size: var(--mantine-font-size-md);
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: var(--mantine-spacing-xs);
   margin-top: var(--mantine-spacing-xs);
   text-align: center;
@@ -78,13 +78,10 @@
     margin-bottom: var(--mantine-spacing-xs);
     margin-top: var(--mantine-spacing-xs);
   }
-  @media (max-width: $mantine-breakpoint-xs) {
-    font-size: var(--mantine-font-size-md);
-  }
 
 }
 .control {
-  padding: var(--mantine-spacing-xs);
+  padding: calc(var(--mantine-spacing-sm) / 2);
   border-radius: var(--mantine-radius-md);
   gap: 8px;
   width: auto;
@@ -94,8 +91,5 @@
   align-items: center;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  background-color: light-dark(var(--mantine-color-), var(--mantine-color-dark-8));
-  @media (max-width: $mantine-breakpoint-xs) {
-    padding: var(--mantine-spacing-xs);
-  }
+  background-color: light-dark(var(--mantine-color-blue-2), var(--mantine-color-dark-8));
 }
