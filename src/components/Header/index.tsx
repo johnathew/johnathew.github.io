@@ -13,10 +13,10 @@ export function Header() {
 
   const items = navData.map((link) => (
     <motion.div key={link.label} whileHover={{
-      scale: 1.2,
+      scale: 1.1,
       transition: { type: 'ease', stiffness: 500 },
       backgroundColor: colorScheme === 'dark' ? 'var(--mantine-color-gray-7)' : 'var(--mantine-color-orange-2)',
-      borderRadius: '20px'
+      borderRadius: '10px'
     }} style={{ borderRadius: '20px' }}>
       <NavLink
         key={link.label}

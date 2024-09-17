@@ -16,7 +16,7 @@ import classes from './Hero.module.css';
 import resumePic from '/jak.png';
 import Contact from '../Contact';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import { useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 import HeroList from '../ui/List';
 import { boxVariant } from '../../util/projectData';
 import { Link } from 'react-router-dom';
@@ -53,11 +53,8 @@ const Hero = () => {
             John A. Kornegay
           </Title>
           <Title className={classes.goal}>
-            Frontend Developer
+            Software Developer
           </Title>
-          <Text className={classes.objective} ta='center' >
-            <b>Objective</b>: A highly motivated individual seeking an internship opportunity to gain experience as a frontend developer.
-          </Text>
         </Stack>
         <div className={classes.inner}
         >
@@ -95,7 +92,7 @@ const Hero = () => {
                 transition: { type: 'spring' },
               }}>
                 <Button radius="sm" size="xs" className={classes.control}>
-                  <Link style={{ textDecoration: 'none', color: 'var(--mantine-color-gray-1)' }} to='https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link' target="_blank" rel="noopener noreferrer">
+                  <Link style={{ textDecoration: "none", color: 'var(--mantine-color-gray-1)' }} to='https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link' target="_blank" rel="noopener noreferrer">
                     Download Resume <IconDownload stroke={3} style={{
                       width: rem(12),
                       height: rem(12),

@@ -98,7 +98,7 @@ const WorkHistory = () => {
               </List.Item>
               <List.Item lh={1.1}>
                 Provided excellent customer service, ensuring each patient was greeted courteously and received their medication
-                in a timely manner 
+                in a timely manner
               </List.Item>
               <List.Item lh={1.1}>
                 Trained new employees on the use of the pharmacy software and proper procedures

@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scale: 0.93;
-  margin-top: rem(10px);
+  scale: 0.97;
+  margin-top: rem(35px);
   margin-bottom: rem(10px);
   @media(max-width: $mantine-breakpoint-xs){
     scale: 0.95;
@@ -146,5 +146,7 @@
 .control {
   &:hover {
     box-shadow: var(--mantine-shadow-xl);
+    text-decoration: underline; 
+    text-underline-offset: 2px;
   }
 }
