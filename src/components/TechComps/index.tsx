@@ -1,15 +1,13 @@
-import { Flex, Container, useMantineColorScheme } from '@mantine/core';
+import { Flex, Container } from '@mantine/core';
 import Title from '../ui/Title';
 import classes from './TechComps.module.css';
 import CompBadge from '../ui/CompBadge';
 import { techBadgesData } from '../../util/projectData';
 
 const TechComps = () => {
-  const { colorScheme } = useMantineColorScheme();
-
   const badges = techBadgesData.map((badge) => {
     return (
-      <CompBadge key={badge.tech} label={badge.tech} icon={badge.badge}  color={badge.color} />
+      <CompBadge key={badge.tech} label={badge.tech} icon={badge.badge} color={badge.color} />
     )
   });
 

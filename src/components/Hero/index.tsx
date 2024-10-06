@@ -50,7 +50,7 @@ const Hero = () => {
       <Container className={classes.mainContainer} id='home' ref={ref}>
         <Stack className={classes.mainInfo} >
           <Title className={classes.title} id='home'>
-            John A. Kornegay
+            John <span className={classes.initial}>A.</span> Kornegay
           </Title>
           <Title className={classes.goal}>
             Software Developer
@@ -77,11 +77,11 @@ const Hero = () => {
                   stroke={2}
                 />
               </ThemeIcon>}>
-                <b>Bachelor of Science in Molecular and Cell Biology</b> – <span>Graduation: 2016</span> <br />
+
+                <b>Bachelor of Science in Molecular and Cell Biology</b><br />
                 University of Texas A&M  - College Station, TX
+
               </List.Item>
-              <Text fw={300} mb='xs' className={classes.locHistory}>
-              </Text>
             </List>
             <Text className={classes.banner}>Feats</Text>
             <Divider mb='md' />

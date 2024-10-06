@@ -1,8 +1,10 @@
-import { Container, Group, useMantineColorScheme } from '@mantine/core';
+import { Container, Group, Tooltip, useMantineColorScheme } from '@mantine/core';
 import { NavLink } from 'react-router-dom';
 import classes from './Header.module.css';
 import { ColorSchemeToggle } from '../ColorSchemeToggle';
-import { IconBrandReact } from '@tabler/icons-react';
+import {
+  IconHome2, IconRewindBackward15
+} from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { navData } from '../../util/navData';
 
@@ -22,8 +24,11 @@ export function Header() {
         key={link.label}
         to={link.to}
         className={classes.link}
+        target='_blank'
       >
-        {link.icon}
+        <Tooltip label={link.label}>
+          {link.icon}
+        </Tooltip>
       </NavLink>
     </motion.div>
 
@@ -31,10 +36,18 @@ export function Header() {
 
   return (
     <Container className={classes.inner}>
-      <IconBrandReact stroke={1.6} />
+      <NavLink to='/' className={classes.navIcon}>
+        <Tooltip label='Resume'>
+          <IconHome2 stroke={1.0} />
+        </Tooltip>
+      </NavLink>
       <Group gap={5} className={classes.group}>
         {items}
         <ColorSchemeToggle />
+        {/* <span>|</span>
+        <NavLink to='myspaceify' className={classes.navIcon}>
+          <Tooltip label='myspaceify'><IconRewindBackward15 stroke={1.0} /></Tooltip>
+        </NavLink> */}
       </Group>
     </Container>
   );

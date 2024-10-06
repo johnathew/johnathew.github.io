@@ -2,14 +2,18 @@
   padding: var(--mantine-spacing-xs);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
   color: var(--mantine-color-blue-5);
 }
 
+.navIcon {
+  margin-top: 5px;
+  font-size: 10px;
+}
  
 .link {
-  display: block;
-  line-height: 1;
+display: flex;
+justify-content: center;  
   padding: rem(7px);
   border-radius: var(--mantine-radius-sm);
   color:  var(--mantine-color-blue-5);

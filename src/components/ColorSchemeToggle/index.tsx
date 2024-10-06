@@ -23,9 +23,10 @@ export function ColorSchemeToggle() {
           color={colorScheme === 'dark' ? 'var(--mantine-color-blue-2)' : 'var(--mantine-color-orange-5)'}
           size="md"
           aria-label='Toggle color scheme'
+          mt={2}
         >
-          <IconMoonStars className={cx(classes.icon, classes.dark)} stroke={1.3} />
-          <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
+          <IconMoonStars className={cx(classes.icon, classes.dark)} stroke={1.0} />
+          <IconSun className={cx(classes.icon, classes.light)} stroke={1.0} />
         </ActionIcon>
       </motion.div>
     </Group >
