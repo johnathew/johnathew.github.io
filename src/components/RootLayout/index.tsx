@@ -1,9 +1,10 @@
 import { AppShell } from '@mantine/core';
+import { Outlet } from 'react-router-dom';
 import { Header } from '../Header';
 import classes from './RootLayout.module.css';
-import { Outlet } from 'react-router-dom';
 
 const RootLayout = () => {
+
 
   return (
     <AppShell
@@ -16,7 +17,7 @@ const RootLayout = () => {
       <AppShell.Main className={classes.content}>
         <Outlet />
       </AppShell.Main>
-    </AppShell >
+    </AppShell>
   );
 };
 

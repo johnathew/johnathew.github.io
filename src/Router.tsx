@@ -14,8 +14,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "myspaceify",
-        element: <MyspacePage />
+        path: 'myspaceify',
+        element: <MyspacePage />,
       },
       {
         path: '*',

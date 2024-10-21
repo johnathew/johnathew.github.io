@@ -1,16 +1,17 @@
 import { Container } from '@mantine/core';
 import { useRouteError, isRouteErrorResponse, Link } from 'react-router-dom';
 import classes from './RootBoundary.module.css';
+
 const RootBoundary = () => {
   const error = useRouteError();
 
   if (isRouteErrorResponse(error)) {
     if (error.status === 404) {
-      return <div>This page doesn't exist!</div>;
+      return <div>This page doesn&apos;t exist!</div>;
     }
 
     if (error.status === 401) {
-      return <div>You aren't authorized to see this</div>;
+      return <div>You aren&apos;t authorized to see this</div>;
     }
 
     if (error.status === 503) {
@@ -22,9 +23,11 @@ const RootBoundary = () => {
     }
   }
 
-  return <Container className={classes.mainError}>
-    Hey, what are you doing here? <Link to=".">Get out of here</Link>
-  </Container>;
+  return (
+    <Container className={classes.mainError}>
+      Hey, what are you doing here? <Link to=".">Get out of here</Link>
+    </Container>
+  );
 };
 
 export default RootBoundary;

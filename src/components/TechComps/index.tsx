@@ -7,25 +7,32 @@ import { techBadgesData } from '../../util/projectData';
 const TechComps = () => {
   const badges = techBadgesData.map((badge) => {
     return (
-      <CompBadge key={badge.tech} label={badge.tech} icon={badge.badge} color={badge.color} />
+      <CompBadge
+        key={badge.tech}
+        label={badge.tech}
+        icon={badge.badge}
+        color={badge.color}
+        alt={badge.alt}
+      />
     )
   });
 
   return (
     <Container className={classes.mainWrapper}>
-      <Title title='Technical Competencies' />
+      <Title title="Technical Competencies" />
       <Flex
         mih={100}
         gap="xl"
         justify="space-evenly"
         align="center"
-        wrap='wrap'
-        mt='md'
+        wrap="wrap"
+        mt="md"
         className={classes.techComps}
       >
         {badges}
       </Flex>
-    </Container>);
+    </Container>
+  );
 };
 
 export default TechComps;

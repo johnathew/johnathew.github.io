@@ -1,7 +1,7 @@
-import { Group, Title, Text, rem, Divider, Paper } from '@mantine/core';
+import { Group, Text, rem } from '@mantine/core';
 import { IconMail, IconMapPin, IconSun } from '@tabler/icons-react';
-import classes from './Contact.module.css';
 import { Link } from 'react-router-dom';
+import classes from './Contact.module.css';
 
 interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
   icon: typeof IconSun;
@@ -10,7 +10,6 @@ interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, '
 }
 
 function ContactIcon({ icon: Icon, description, link, ...others }: ContactIconProps) {
-
   const emailLink = link === 'mailto:jakornegay01@gmail.com' ? 'auto' : 'none';
 
   return (
@@ -40,7 +39,7 @@ const contactData = [
 const Contact = () => {
   const items = contactData.map((item, index) => <ContactIcon key={index} {...item} />);
   return (
-    <Group gap='xs' mt={0}>{items}</Group>
+    <Group gap="xs" mt={0}>{items}</Group>
   );
 };
 

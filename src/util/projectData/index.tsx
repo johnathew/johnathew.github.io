@@ -1,9 +1,6 @@
-import { rem, Image } from "@mantine/core";
-import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconBrandSpotify, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5, IconBrandGithub } from "@tabler/icons-react";
-import rrDark from '/rrDark.svg';
-import rrLight from '/rrLight.svg';
+import { rem, Image } from '@mantine/core';
+import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5, IconBrandGithub } from '@tabler/icons-react';
 import reactQuery from '/reactQuery.svg';
-
 
 export const projects = [
     {
@@ -68,14 +65,14 @@ export const projects = [
 
 
 export const techBadgesData = [
-    { tech: 'React', badge: <IconBrandReact stroke={1.7} />, color: 'var(--mantine-color-blue-6)' },
-    { tech: 'Tailwind', badge: <IconBrandTailwind stroke={1.7} />, color: 'var(--mantine-color-blue-6)' },
-    { tech: 'Typescript', badge: <IconBrandTypescript stroke={1.7} />, color: 'var(--mantine-color-blue-6)' },
-    { tech: 'HTML', badge: <IconBrandHtml5 stroke={1.7} />, color: 'var(--mantine-color-orange-6)' },
-    { tech: 'CSS', badge: <IconBrandCss3 stroke={1.7} />, color: 'var(--mantine-color-blue-4)' },
-    { tech: 'NextJS', badge: <IconBrandNextjs stroke={1.7} />, color: 'light-dark(var(--mantine-color-gray-2), (--mantine-color-gray-8)' },
-    { tech: 'Git', badge: <IconBrandGithub stroke={1.7} />, color: 'light-dark(var(--mantine-color-black), (--mantine-color-white)' },
-    { tech: 'React Query', badge: <Image src={reactQuery} w={'24px'} />, },
+    { tech: 'React', badge: <IconBrandReact stroke={1.7} />, color: 'var(--mantine-color-blue-6)', alt: 'React Logo' },
+    { tech: 'Tailwind', badge: <IconBrandTailwind stroke={1.7} />, color: 'var(--mantine-color-blue-6)', alt: 'Tailwind Logo' },
+    { tech: 'Typescript', badge: <IconBrandTypescript stroke={1.7} />, color: 'var(--mantine-color-blue-6)', alt: 'Typescript Logo' },
+    { tech: 'HTML', badge: <IconBrandHtml5 stroke={1.7} />, color: 'var(--mantine-color-orange-6)', alt: 'HTML Logo' },
+    { tech: 'CSS', badge: <IconBrandCss3 stroke={1.7} />, color: 'var(--mantine-color-blue-4)', alt: 'CSS Logo' },
+    { tech: 'NextJS', badge: <IconBrandNextjs stroke={1.7} />, color: 'light-dark(var(--mantine-color-gray-2), (--mantine-color-gray-8)', alt: 'NextJS Logo' },
+    { tech: 'Git', badge: <IconBrandGithub stroke={1.7} />, color: 'light-dark(var(--mantine-color-black), (--mantine-color-white)', alt: 'Github Logo' },
+    { tech: 'React Query', badge: <Image src={reactQuery} w={'24px'} />, alt: 'React Query Logo' },
 ]
 
 
