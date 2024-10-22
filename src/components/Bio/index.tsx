@@ -38,10 +38,10 @@ const Bio = () => {
       transition={{ type: 'ease', duration: 0.7 }}
     >
       <Container className={classes.wrapper} id="about" ref={ref}>
-        <Title title="About Me" />
+        <Title title="About" />
         <Blockquote icon={icon} radius="md" iconSize={40} className={classes.blockQuote}>
           <ScrollArea className={classes.scroll} h={450}>
-            <Head my="xs" order={2} className={classes.head} c="var(--mantine-color-blue-7)">Hello, my name is John Andrew Kornegay 👋 </Head>
+            <Head my="xs" order={2} className={classes.head} c="var(--mantine-color-blue-7)">Dear, Site Visitor </Head>
             <Text fw={300} style={breakStyles}>
               I am currently working as a Helpdesk Specialist contracted by the CDC
               and am looking to transition into a career as a Front End Developer.

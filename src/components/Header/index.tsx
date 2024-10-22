@@ -15,11 +15,10 @@ export function Header() {
       key={link.label}
       whileHover={{
         scale: 1.1,
-        transition: { type: "ease", stiffness: 500 },
+        transition: { type: "ease", stiffness: 500, },
         backgroundColor: colorScheme === 'dark' ? 'var(--mantine-color-gray-7)' : 'var(--mantine-color-orange-2)',
         borderRadius: "10px",
       }}
-      style={{ borderRadius: "20px" }}
     >
       <Link
         key={link.label}

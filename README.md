@@ -3,14 +3,9 @@
 
 # React Portfolio 
 
-A React-based portfolio project.
+A React-based portfolio project, showcasing other applications I have built.
 
-
-### Testing scripts
-
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
-- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
+# Resources 
+- Tabler Icons
+- Mantine UI
+- React Framer Motion

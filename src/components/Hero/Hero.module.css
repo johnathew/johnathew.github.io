@@ -43,10 +43,10 @@
   max-width: rem(300px);
   max-height: rem(390px);
   display: flex;
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-xs) 0 var(--mantine-spacing-xs);
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  background-color: var(--mantine-color-body);
+  justify-content: center;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-xs) 0 var(--mantine-spacing-xs);
   border-radius: var(--mantine-radius-md);
   margin-bottom: var(--mantine-spacing-lg);
   border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
@@ -68,19 +68,6 @@
      padding:0;
   }
 }
-
-.contacts {
- display: flex;
-  position: relative;
-  border-radius: var(--mantine-radius-md);
-  padding-bottom: var(--mantine-spacing-xs);
-  border: rem(1px) solid transparent;
-  @media (max-width: $mantine-breakpoint-sm) {
-    margin-bottom: var(--mantine-spacing-xs);
-    padding-left: var(--mantine-spacing-md);
-  }
-}
-
 
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
@@ -111,8 +98,8 @@
 
 
 .image {
-  width: 100%;
-  border-radius: calc(var(--mantine-radius-sm) * 2);
+  width: 70%;
+  border-radius: calc(var(--mantine-radius-sm) * 4);
   box-shadow: var(--mantine-shadow-sm);
   border: rem(1px) solid light-dark(var(--mantine-color-blue-9), var(--mantine-color-blue-3));
   @media (max-width: $mantine-breakpoint-xs) {

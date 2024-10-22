@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: calc(var(--mantine-spacing-lg) * 3);
+
   @media(max-width: $mantine-breakpoint-xs){
     padding:0;
     scale: 0.95;
@@ -20,17 +21,16 @@
 
    .card {
     position: relative;
-    overflow: hidden;
     display: flex;
     align-items: stretch;
     flex-direction: column;
-
+    overflow: hidden;
+    justify-content: start;
     transition: transform 150ms ease, box-shadow 100ms ease;
     padding: var(--mantine-spacing-lg);
     padding-left: calc(var(--mantine-spacing-xl) * 1);
-    max-height: fit-content;
+    max-height: rem(300px);
     min-width: rem(300px);
-
 
       &:hover {
         background-color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));

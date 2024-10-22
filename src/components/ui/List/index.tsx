@@ -63,7 +63,7 @@ const HeroList = () => (
       }
     >
       <b>Focus</b> –
-      Independently motivated to learn and practice new skills,
+      Independently motivated to learn, practice new skills,
       and to apply them to real-world projects
     </List.Item>
   </List>

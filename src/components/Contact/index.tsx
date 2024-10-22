@@ -39,7 +39,7 @@ const contactData = [
 const Contact = () => {
   const items = contactData.map((item, index) => <ContactIcon key={index} {...item} />);
   return (
-    <Group gap="xs" mt={0}>{items}</Group>
+    <Group gap="xs" mt={0} ml={40}>{items}</Group>
   );
 };
 

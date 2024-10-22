@@ -1,5 +1,5 @@
 import { rem, Image } from '@mantine/core';
-import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5, IconBrandGithub } from '@tabler/icons-react';
+import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5, IconBrandGithub, IconCards } from '@tabler/icons-react';
 import reactQuery from '/reactQuery.svg';
 
 export const projects = [
@@ -30,6 +30,20 @@ export const projects = [
         utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Github API' }, { tech: 'Tailwind' }, { tech: 'ReactQuery' }],
         to: 'https://github.com/johnathew/github_react_exercise_ts',
         extLink: 'https://deluxe-cascaron-d7a13a.netlify.app/',
+    },
+    {
+        title: "Memory Game",
+        icon: <IconCards style={{ width: rem(32), height: rem(32), color: 'var(--mantine-color-green-8' }} />,
+        ghLink: <IconCode stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-blue-6' }} />,
+        extLinkIcon: <IconExternalLink stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-orange-4' }} />,
+        image:
+            'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
+        description: 'A simple memory game made with React and Typescript. Made to demonstrate proper use of state management and logic.',
+        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Tailwind' }],
+        tooltipGH: 'Github Repository',
+        tooltipExt: 'Live Demo',
+        to: 'https://github.com/johnathew/memory_game',
+        extLink: 'https://memory-game-aaa5c.web.app/'
     },
     // {
     //     title: 'Spotify Playlist Project',

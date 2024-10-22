@@ -42,13 +42,14 @@ const Hero = () => {
   }, [control, inView]);
 
   return (
-    <motion.div variants={boxVariant}
+    <motion.div
+      variants={boxVariant}
       initial="hidden"
       animate={control}
       transition={{ type: 'ease', duration: 0.5 }}
     >
       <Container className={classes.mainContainer} id='home' ref={ref}>
-        <Stack className={classes.mainInfo} >
+        <Stack className={classes.mainInfo}>
           <Title className={classes.title} id='home'>
             John <span className={classes.initial}>A.</span> Kornegay
           </Title>
@@ -56,16 +57,12 @@ const Hero = () => {
             Software Developer
           </Title>
         </Stack>
-        <div className={classes.inner}
-        >
-          <Stack className={classes.wrapper}
+        <div className={classes.inner}>
+          <Stack
+            className={classes.wrapper}
           >
-            <motion.div variants={boxVariant} transition={{ type: 'ease', }}>
-              <Image src={resumePic} className={classes.image} fallbackSrc='https://placehold.co/400x400?text=:)' alt="headshot photo" />
-            </motion.div>
-            <div className={classes.contacts} >
-              <Contact />
-            </div>
+            <Image src={resumePic} className={classes.image} fallbackSrc='https://placehold.co/400x400?text=:)' alt="headshot photo" />
+            <Contact />
           </Stack>
           <div className={classes.content}>
             <Text className={classes.banner}>Education</Text>
@@ -77,10 +74,8 @@ const Hero = () => {
                   stroke={2}
                 />
               </ThemeIcon>}>
-
                 <b>Bachelor of Science in Molecular and Cell Biology</b><br />
                 University of Texas A&M  - College Station, TX
-
               </List.Item>
             </List>
             <Text className={classes.banner}>Feats</Text>
@@ -92,12 +87,16 @@ const Hero = () => {
                 transition: { type: 'spring' },
               }}>
                 <Button radius="sm" size="xs" className={classes.control}>
-                  <Link style={{ textDecoration: "none", color: 'var(--mantine-color-gray-1)' }} to='https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link' target="_blank" rel="noopener noreferrer">
-                    Download Resume <IconDownload stroke={3} style={{
-                      width: rem(12),
-                      height: rem(12),
-                      marginLeft: '5px',
-                    }} />
+                  <Link
+                    style={{ textDecoration: "none", color: 'var(--mantine-color-gray-1)' }} to='https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link' target="_blank" rel="noopener noreferrer">
+                    Download Resume
+                    <IconDownload
+                      stroke={3}
+                      style={{
+                        width: rem(12),
+                        height: rem(12),
+                        marginLeft: '5px',
+                      }} />
                   </Link>
                 </Button>
               </motion.div>

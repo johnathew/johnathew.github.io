@@ -11,10 +11,9 @@ export function HomePage() {
     <>
       <Hero />
       <Divider mt="xl" />
-      <WorkHistory />
       <Projects />
       <TechComps />
-      <Bio />
+      <WorkHistory />
     </>
   );
 };

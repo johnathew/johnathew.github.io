@@ -4,22 +4,19 @@
 }
 
 .root {
-  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
+  background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-9));
   overflow: auto;
   display: flex;
   justify-content: center ;
-  width: 100%;
 }
 
-
-  .content {
+.content {
     padding-top: calc(var(--mantine-spacing-md) * 3);
     border: 0.5px solid var(--mantine-color-default-border);
       @media (max-width: $mantine-breakpoint-sm) {
         flex-direction: column;
         align-items: center;
         margin-right: 0;
-    
       } 
     
       @media (max-width: $mantine-breakpoint-xs) {
@@ -28,4 +25,3 @@
         margin-inline: calc(var(--mantine-spacing-sm) * 1);
       }
   } 
-
