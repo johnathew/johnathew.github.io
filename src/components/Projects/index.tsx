@@ -53,7 +53,7 @@ export function Projects() {
         </Box>
       </Group>
       <Divider mt={10} />
-      <Text size="sm" fw={300} opacity={0.9} mt="sm" mb="xs">
+      <Text size="sm" fw={400} mt="sm" mb="xs">
         {article.description}
       </Text>
       <Group gap="xs">
