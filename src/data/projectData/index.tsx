@@ -1,6 +1,6 @@
 import { rem, Image } from '@mantine/core';
 import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5, IconBrandGithub, IconCards } from '@tabler/icons-react';
-import reactQuery from '/reactQuery.svg';
+import reactQuery from '../../assets/images/reactQuery.svg';
 
 export const projects = [
     {
@@ -13,9 +13,9 @@ export const projects = [
         description: 'A Pokedex made with React, ReactQuery, and Typescript. Utilizes the PokeAPI to fetch data.',
         tooltipGH: 'Github Repository',
         tooltipExt: 'Live Demo',
-        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'React Router' }, { tech: 'PokeAPI' }, { tech: 'Tailwind' }, { tech: 'ReactQuery' }],
+        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'PokeAPI' }, { tech: 'Tailwind' }, { tech: 'ReactQuery' }],
         to: 'https://github.com/johnathew/pokemonAPI-reacthooks',
-        extLink: 'https://johnspokedex.netlify.app/'
+        extLink: 'https://johnspokedex.netlify.app/',
     },
     {
         title: 'Github Repo Search',
@@ -32,7 +32,7 @@ export const projects = [
         extLink: 'https://deluxe-cascaron-d7a13a.netlify.app/',
     },
     {
-        title: "Memory Game",
+        title: 'Memory Game',
         icon: <IconCards style={{ width: rem(32), height: rem(32), color: 'var(--mantine-color-green-8' }} />,
         ghLink: <IconCode stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-blue-6' }} />,
         extLinkIcon: <IconExternalLink stroke={1.7} style={{ width: rem(25), height: rem(25), color: 'var(--mantine-color-orange-4' }} />,
@@ -43,7 +43,7 @@ export const projects = [
         tooltipGH: 'Github Repository',
         tooltipExt: 'Live Demo',
         to: 'https://github.com/johnathew/memory_game',
-        extLink: 'https://memory-game-aaa5c.web.app/'
+        extLink: 'https://memory-game-aaa5c.web.app/',
     },
     // {
     //     title: 'Spotify Playlist Project',
@@ -68,15 +68,13 @@ export const projects = [
         image:
             'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
         description: 'The current resume I am using to apply for jobs, also the site you are currently viewing. Made with React, Typescript, and Mantine UI.',
-        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'Framer Motion' }, { tech: 'React Router' }, { tech: 'MantineUI' }],
+        utilizes: [{ tech: 'React' }, { tech: 'Typescript' }, { tech: 'MantineUI' }],
         tooltipGH: 'Github Repository',
         tooltipExt: 'You are here!',
         to: 'https://github.com/johnathew/resume_JAK',
         extLink: '/',
     },
 ];
-
-
 
 export const techBadgesData = [
     { tech: 'React', badge: <IconBrandReact stroke={1.7} />, color: 'var(--mantine-color-blue-6)', alt: 'React Logo' },
@@ -86,11 +84,5 @@ export const techBadgesData = [
     { tech: 'CSS', badge: <IconBrandCss3 stroke={1.7} />, color: 'var(--mantine-color-blue-4)', alt: 'CSS Logo' },
     { tech: 'NextJS', badge: <IconBrandNextjs stroke={1.7} />, color: 'light-dark(var(--mantine-color-gray-2), (--mantine-color-gray-8)', alt: 'NextJS Logo' },
     { tech: 'Git', badge: <IconBrandGithub stroke={1.7} />, color: 'light-dark(var(--mantine-color-black), (--mantine-color-white)', alt: 'Github Logo' },
-    { tech: 'React Query', badge: <Image src={reactQuery} w={'24px'} />, alt: 'React Query Logo' },
-]
-
-
-export const boxVariant = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0, },
-}
+    { tech: 'React Query', badge: <Image src={reactQuery} w="24px" />, alt: 'React Query Logo' },
+];

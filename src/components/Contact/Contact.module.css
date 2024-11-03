@@ -1,29 +1,43 @@
-.wrapper {
+.contactGroup {
   display: flex;
-  align-items: center;
-  color: var(--mantine-color-white);
-  
+ margin-left: 20px;
+ padding-right: 10px;
+
+ @media (max-width: $mantine-breakpoint-sm) {
+    padding-right: 0;
+  }
+}
+
+
+.wrapper {
+  width: auto;
+  height: auto;
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: rem(150px);
+  }
 }
 
 .description {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  max-width: rem(300px);
   font-size: var(--mantine-font-size-sm);
-
+  margin-left: -3px;
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;
   }
 }
-
 
 .description:hover {
   color: var(--mantine-color-cyan);
   text-decoration: underline;
 }
 
-
 .title {
-  font-family: Greycliff CF, var(--mantine-font-family);
   font-size: rem(14px);
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-5));
 }
+
+.icon {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-orange-2));
+}
+
+

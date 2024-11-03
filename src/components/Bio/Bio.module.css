@@ -7,8 +7,8 @@
   padding-top: calc(var(--mantine-spacing-lg) * 2);
   width: 100%;
   padding-bottom: calc(var(--mantine-spacing-lg) * 2);
-  @media(max-width: $mantine-breakpoint-xs){
- padding: calc(var(--mantine-spacing-lg) * 1);
+  @media(max-width: $mantine-breakpoint-xs) {
+   padding: calc(var(--mantine-spacing-lg) * 1);
   }
 }
 
@@ -17,7 +17,7 @@
   line-height: 2;
   @media (max-width: $mantine-breakpoint-xs) {
     padding: calc(var(--mantine-spacing-sm) * 2);
-    margin:0;
+    margin:5;
     text-align: left;
   }
 }
@@ -30,7 +30,6 @@
 }
 
 .textContent {
-  font-family: Greycliff CF, var(--mantine-font-family);
   font-size: rem(10px);
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-1));
   
@@ -40,7 +39,6 @@
   
 }
 .title {
-  font-family: 'Greycliff CF', var(--mantine-font-family);
   font-weight: bold;
   font-size: var(--mantine-font-size-xl);
   color:light-dark(var(--mantine-color-black), var(--mantine-color-white));

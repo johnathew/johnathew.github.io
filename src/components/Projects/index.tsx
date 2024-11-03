@@ -1,29 +1,8 @@
-import { SimpleGrid, Text, Container, Paper, Badge, Group, ActionIcon, Tooltip, Box, Divider } from '@mantine/core';
-import { motion, useAnimation, useInView } from 'framer-motion';
-import { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { SimpleGrid, Text, Container, Paper, Badge, Group, ActionIcon, Tooltip, Box, Divider, Title } from '@mantine/core';
 import classes from './Projects.module.css';
-import Title from '../ui/Title';
-import { projects } from '../../util/projectData';
-
-const boxVariant = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
-};
+import { projects } from '../../data/projectData';
 
 export function Projects() {
-  const ref = useRef(null);
-  const control = useAnimation();
-  const inView = useInView(ref);
-
-  useEffect(() => {
-    if (inView) {
-      control.start('visible');
-    } else {
-      control.start('hidden');
-    }
-  }, [control, inView]);
-
   const cards = projects.map((article) => (
     <Paper withBorder radius="md" className={classes.card} key={article.title}>
       <Group justify="space-between">
@@ -34,26 +13,38 @@ export function Projects() {
           </Text>
         </Group>
         <Box className={classes.control}>
-          <Link to={article.to}>
-            <Tooltip label={article.tooltipGH} events={{ hover: true, focus: true, touch: false }}>
-              <motion.div whileHover={{ scale: 1.5, transition: { type: 'ease' } }}>
-                <ActionIcon variant="transparent" color="blue" aria-label="Github link">
-                  {article.ghLink}
-                </ActionIcon>
-              </motion.div>
-            </Tooltip>
-          </Link>
-          <Link to={article.extLink}>
-            <Tooltip label={article.tooltipExt} events={{ hover: true, focus: true, touch: false }}>
-              <motion.div whileHover={{ scale: 1.5, transition: { type: 'ease' } }}>
-                {article.extLinkIcon}
-              </motion.div>
-            </Tooltip>
-          </Link>
+          <Tooltip
+            label={article.tooltipGH}
+            events={{ focus: true, hover: true, touch: true }}
+          >
+            <ActionIcon
+              component="a"
+              target="_blank"
+              href={article.to}
+              variant="transparent"
+              aria-label="Github link"
+            >
+              {article.ghLink}
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip
+            label={article.tooltipExt}
+            events={{ focus: true, hover: true, touch: true }}
+          >
+            <ActionIcon
+              component="a"
+              target="_blank"
+              href={article.extLink}
+              variant="transparent"
+              aria-label="External link"
+            >
+              {article.extLinkIcon}
+            </ActionIcon>
+          </Tooltip>
         </Box>
       </Group>
       <Divider mt={10} />
-      <Text size="sm" fw={400} mt="sm" mb="xs">
+      <Text size="sm" fw={500} mt="sm" mb="xs">
         {article.description}
       </Text>
       <Group gap="xs">
@@ -67,18 +58,13 @@ export function Projects() {
   ));
 
   return (
-    <motion.div
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
-      transition={{ type: 'ease', duration: 0.6 }}
-    >
-      <Container id="projects" className={classes.mainWrapper}>
-        <Title title="Projects" />
-        <SimpleGrid className={classes.grid} ref={ref} cols={{ base: 1, sm: 2 }}>
-          {cards}
-        </SimpleGrid>
-      </Container>
-    </motion.div>
+    <Container id="projects" className={classes.mainWrapper}>
+      <Title title="Projects" order={2}>
+        # Projects
+      </Title>
+      <SimpleGrid className={classes.grid} cols={{ base: 1, sm: 2 }}>
+        {cards}
+      </SimpleGrid>
+    </Container>
   );
 }

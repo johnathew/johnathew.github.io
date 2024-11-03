@@ -1,12 +1,11 @@
 import { Divider } from '@mantine/core';
 import Hero from '../components/Hero';
 import WorkHistory from '../components/WorkHistory';
-import Bio from '../components/Bio';
-import { Projects } from '../components/Projects';
 import TechComps from '../components/TechComps';
+import { Projects } from '../components/Projects';
+import Bio from '../components/Bio';
 
 export function HomePage() {
-
   return (
     <>
       <Hero />
@@ -14,6 +13,7 @@ export function HomePage() {
       <Projects />
       <TechComps />
       <WorkHistory />
+      <Bio />
     </>
   );
-};
+}

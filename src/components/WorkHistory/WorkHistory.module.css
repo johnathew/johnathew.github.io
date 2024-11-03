@@ -25,7 +25,6 @@
 
 .list {
   font-size: 14px;
-  font-family: Greycliff CF, var(--mantine-font-family);
   font-weight: 400;
   margin-right: var(--mantine-spacing-md);
   @media (max-width: $mantine-breakpoint-xs) {
@@ -38,7 +37,6 @@
   display: flex;
   justify-content: space-between;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
-  font-family: Greycliff CF, var(--mantine-font-family);
   font-size: rem(14px);
   font-style: italic;
   margin-bottom: calc(var(--mantine-spacing-xs) * 1);
