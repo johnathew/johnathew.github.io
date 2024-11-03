@@ -4,9 +4,11 @@
   justify-content: center;
   height: auto;
   margin-top: rem(150px);
+  width: 65vw;
   margin-bottom: rem(10px);
   @media (max-width: $mantine-breakpoint-md) {
     justify-content: center;
+    width: 100%;
     align-items: center;
     flex-direction: column;
     margin-top: rem(50px);
