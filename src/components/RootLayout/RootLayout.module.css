@@ -31,7 +31,8 @@ body {
 
 .burger {
   position: relative;
-  padding-left: 20px;
+  margin-left: 20px;
+  z-index: 13;
   margin-top:9px;
 }
 

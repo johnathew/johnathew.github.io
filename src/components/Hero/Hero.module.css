@@ -4,7 +4,7 @@
   justify-content: center;
   height: auto;
   margin-top: rem(150px);
-  width: 65vw;
+  width: 70vw;
   margin-bottom: rem(10px);
   @media (max-width: $mantine-breakpoint-md) {
     justify-content: center;
@@ -16,14 +16,16 @@
 }
 
 .mainInfo { 
-  width: rem(400px);
-  height: rem(320px);
+  width: 90%;
+  height: 100%;
   display: flex;
+  margin-left: rem(50px);
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   @media (max-width: $mantine-breakpoint-md) {
-    margin:0;
+    margin-top: rem(40px);
+    margin-left: 0;
     justify-content: flex-start;
     align-items: center;
   }
@@ -74,6 +76,7 @@
 
 .content {
   display: flex;
+  width: 105%;
   flex-direction: column;
   @media (max-width: $mantine-breakpoint-sm) {
     align-items: center;
