@@ -15,8 +15,8 @@ export const nav = [
     name: 'Work',
     to: '/#work',
 },
-{
-    name: 'Bio',
-    to: '/#about',
-},
+// {
+//     name: 'Bio',
+//     to: '/#about',
+// },
 ];

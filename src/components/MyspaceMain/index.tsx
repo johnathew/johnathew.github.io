@@ -1,5 +1,5 @@
 import { Group, Stack, Image, Flex, Text, Space } from "@mantine/core";
-import resumePic from '../../assets/images/jak.png';
+import resumePic from '../../assets/images/jak.webp';
 import classes from './MyspaceMain.module.css'
 
 export function MyspaceMain() {

@@ -1,0 +1,25 @@
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: rem(150px);
+    width: 70vw;
+    margin-bottom: rem(10px);
+    @media (max-width: $mantine-breakpoint-md) {
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+      margin-top: rem(50px);
+    }
+  }
+
+  .pic img {
+    border-radius: 10px;
+    bottom: 0;
+    width: 200px;
+    height: auto;
+    padding: 0;
+    margin-bottom: 0;
+  }

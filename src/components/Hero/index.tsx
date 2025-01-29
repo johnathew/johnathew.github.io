@@ -15,7 +15,7 @@ import {
 import { IconDownload, IconSchool } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
 import classes from './Hero.module.css';
-import resumePic from '../../assets/images/jak.png';
+import resumePic from '../../assets/images/jak.webp';
 import Contact from '../Contact';
 import HeroList from '../ui/HeroList';
 
@@ -28,9 +28,9 @@ const Hero = () => (
   <Container className={classes.mainContainer} id="home">
     <Stack className={classes.mainInfo}>
       <Title className={classes.title} id="home">
-        Hello, I&apos;m
+        Hello, I&apos;m...
         <br />
-        <span className={classes.name}> John A. Kornegay.</span>
+        <span className={classes.name}> <span>J</span>ohn A. <span>K</span>ornegay.</span>
       </Title>
       <Title className={classes.subtitle} order={4}>
         Software Developer
@@ -39,6 +39,7 @@ const Hero = () => (
         <Image
           src={resumePic}
           className={classes.image}
+          loading='lazy'
           fallbackSrc="https://placehold.co/400x400?text=:)"
           alt="headshot photo"
         />
@@ -49,7 +50,26 @@ const Hero = () => (
       <div className={classes.content}>
         <Text className={classes.banner}>Education</Text>
         <Divider mb="xs" />
-        <List>
+        <List pb={4}>
+          <List.Item
+            className={classes.listItem}
+            icon={
+              <ThemeIcon
+                size={20}
+                radius="md"
+                variant="filled"
+                className={classes.icon}
+              >
+                <IconSchool
+                  style={styles}
+                  stroke={2}
+                />
+              </ThemeIcon>
+            }
+          >
+            <b>Master of Science in Computer Science</b><br />
+            University of Texas Rio Grande - McAllen, TX
+          </List.Item>
           <List.Item
             className={classes.listItem}
             icon={
