@@ -53,7 +53,6 @@ const Hero = () => {
           <Image
             src={resumePic}
             className={classes.image}
-            loading='lazy'
             fallbackSrc="https://placehold.co/400x400?text=:)"
             alt="headshot photo"
           />
