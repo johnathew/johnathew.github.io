@@ -5,6 +5,7 @@ import { titleContent } from '../../data/workData';
 const WorkHistory = () => {
   const { colorScheme } = useMantineColorScheme();
   const color = colorScheme === 'dark' ? 'var(--mantine-color-orange-2)' : 'var(--mantine-color-blue-9)';
+  const lightDark = colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'
 
   return (
     <Container className={classes.mainWrapper} id="work">
@@ -20,8 +21,11 @@ const WorkHistory = () => {
       >
         <Timeline.Item title={titleContent[0]}>
           <Divider
-            color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'}
             mb="xs"
+            styles={{
+              label: { color: lightDark, fontWeight: 500, fontSize: '14px' }
+            }}
+            color={lightDark}
             label="Maximus Federal - Remote; McAllen, TX"
             labelPosition="left"
           />
@@ -46,8 +50,10 @@ const WorkHistory = () => {
         </Timeline.Item>
         <Timeline.Item title={titleContent[1]} className={classes.jobTitle}>
           <Divider
-            size="xs"
-            color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'}
+            styles={{
+              label: { color: lightDark, fontWeight: 500, fontSize: '14px' }
+            }}
+            color={lightDark}
             mb="xs"
             label="University of Texas Rio Grande Valley - Remote; Edinburg, TX"
             labelPosition="left"
@@ -71,8 +77,10 @@ const WorkHistory = () => {
         </Timeline.Item>
         <Timeline.Item title={[titleContent[2]]} className={classes.jobTitle}>
           <Divider
-            size="xs"
-            color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'}
+            styles={{
+              label: { color: lightDark, fontWeight: 400, fontSize: '14px' }
+            }}
+            color={lightDark}
             mb="xs"
             label="SAMES, Inc. - McAllen, TX"
             labelPosition="left"
@@ -94,8 +102,10 @@ const WorkHistory = () => {
         </Timeline.Item>
         <Timeline.Item title={[titleContent[3]]} className={classes.jobTitle}>
           <Divider
-            size="xs"
-            color={colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'}
+            styles={{
+              label: { color: lightDark, fontWeight: 500, fontSize: '14px' }
+            }}
+            color={lightDark}
             mb="xs"
             label="Walgreens Pharmacy- Palmview, TX"
             labelPosition="left"

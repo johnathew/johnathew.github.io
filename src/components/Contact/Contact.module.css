@@ -1,8 +1,11 @@
 .contactGroup {
-  display: flex;
- margin-left: 20px;
- padding-right: 10px;
 
+text-align: left;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: start;
+margin-left: 10px;
  @media (max-width: $mantine-breakpoint-sm) {
     padding-right: 0;
   }
@@ -19,8 +22,7 @@
 
 .description {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-size: var(--mantine-font-size-sm);
-  margin-left: -3px;
+  font-size: var(--mantine-font-size-sm); 
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;
   }
