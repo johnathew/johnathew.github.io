@@ -1,6 +1,5 @@
-import { rem, Image } from '@mantine/core';
+import { rem } from '@mantine/core';
 import { IconPokeball, IconCode, IconExternalLink, IconFileSearch, IconFileAnalytics, IconBrandReact, IconBrandTypescript, IconBrandNextjs, IconBrandTailwind, IconBrandCss3, IconBrandHtml5, IconBrandGithub, IconCards } from '@tabler/icons-react';
-import reactQuery from '../../assets/images/reactQuery.svg';
 
 export const projects = [
     {
@@ -84,5 +83,4 @@ export const techBadgesData = [
     { tech: 'CSS', badge: <IconBrandCss3 stroke={1.7} />, color: 'var(--mantine-color-blue-4)', alt: 'CSS Logo' },
     { tech: 'NextJS', badge: <IconBrandNextjs stroke={1.7} />, color: 'light-dark(var(--mantine-color-gray-2), (--mantine-color-gray-8)', alt: 'NextJS Logo' },
     { tech: 'Git', badge: <IconBrandGithub stroke={1.7} />, color: 'light-dark(var(--mantine-color-black), (--mantine-color-white)', alt: 'Github Logo' },
-    { tech: 'React Query', badge: <Image src={reactQuery} w="24px" />, alt: 'React Query Logo' },
 ];
