@@ -1,12 +1,17 @@
-import '@mantine/core/styles.css';
-import { MantineProvider } from '@mantine/core';
-import { Router } from './Router';
-import { theme } from './theme';
+import { About } from './components/About'
+import { Hero } from './components/Hero'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
-export default function App() {
+function App() {
   return (
-    <MantineProvider theme={theme}>
-      <Router />
-    </MantineProvider>
-  );
+    <main className='font-primary w-full bg-gradient-to-r from-slate-950 to-slate-900 overflow-scroll items-center'>
+      <Header />
+      <Hero />
+      <About />
+      <Footer />
+    </main>
+  )
 }
+
+export default App

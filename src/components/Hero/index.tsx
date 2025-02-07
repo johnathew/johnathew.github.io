@@ -1,139 +1,262 @@
-import {
-  Button,
-  Group,
-  Text,
-  Stack,
-  Container,
-  Divider,
-  rem,
-  List,
-  ThemeIcon,
-  Image,
-  Title,
-  Flex,
-  useMantineColorScheme,
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { IconDownload, IconSchool } from '@tabler/icons-react';
-import { Link } from 'react-router-dom';
-import classes from './Hero.module.css';
-import resumePic from '../../assets/images/jak.webp';
-import Contact from '../Contact';
-import HeroList from '../ui/HeroList';
+import { motion } from "framer-motion";
+import AnimatedText from "../AnimatedText";
+import Cube from "../Cube";
 
-const styles = {
-  width: rem(15),
-  height: rem(15),
+const grad1 = {
+    initial: {
+        x1: "0%",
+        x2: "0%",
+        y1: "80%",
+        y2: "100%",
+    },
+    animate: {
+        x1: ["0%", "0%", "200%"],
+        x2: ["0%", "0%", "180%"],
+        y1: ["80%", "0%", "0%"],
+        y2: ["100%", "20%", "20%"],
+    },
 };
 
-const Hero = () => {
-  const [opened] = useDisclosure();
-  const { colorScheme } = useMantineColorScheme();
-  const lightDark = colorScheme === 'light' ? 'var(--mantine-color-gray-8)' : 'var(--mantine-color-gray-4'
+const grad2 = {
+    initial: {
+        x1: "0%",
+        x2: "0%",
+        y1: "80%",
+        y2: "100%",
+    },
+    animate: {
+        x1: ["20%", "100%", "100%"],
+        x2: ["0%", "90%", "90%"],
+        y1: ["80%", "80%", "-20%"],
+        y2: ["100%", "100%", "0%"],
+    },
+};
+const grad3 = {
+    initial: {
+        x1: "0%",
+        x2: "0%",
+        y1: "80%",
+        y2: "100%",
+    },
+    animate: {
+        x1: ["20%", "100%", "100%"],
+        x2: ["0%", "90%", "90%"],
+        y1: ["80%", "80%", "-20%"],
+        y2: ["100%", "100%", "0%"],
+    },
+};
+const grad4 = {
+    initial: {
+        x1: "40%",
+        x2: "50%",
+        y1: "160%",
+        y2: "180%",
+    },
+    animate: {
+        x1: "0%",
+        x2: "10%",
+        y1: "-40%",
+        y2: "-20%",
+    },
+};
+const grad5 = {
+    initial: {
+        x1: "-40%",
+        x2: "-10%",
+        y1: "0%",
+        y2: "20%",
+    },
+    animate: {
+        x1: ["40%", "0%", "0%"],
+        x2: ["10%", "0%", "0%"],
+        y1: ["0%", "0%", "180%"],
+        y2: ["20%", "20%", "200%"],
+    },
+};
+export const Hero = () => {
+    return (
+        <section
+            className="flex w-full h-svh items-center justify-around antialiased overflow-hidden"
+            aria-labelledby="hero-heading"
+        >
+            <div className="flex flex-col items-center align-middle absolute">
+                <Cube />
+                <SVGs />
+                <div className="flex flex-col h-3/4">
+                    <h1
+                        id="hero-heading"
+                        className="text-4xl sm:text-5xl text-white font-light z-10"
+                    >
+                        <span className="text-cyan-400">John</span> Kornegay
+                    </h1>
+                    <span className="md:text-md text-sm text-slate-200">
+                        <AnimatedText />
+                    </span>
+                </div>
+            </div>
+        </section>
+    );
+};
 
-  return (
-    <Container className={classes.mainContainer} id="home">
-      <Stack className={classes.mainInfo}>
-        <Title className={classes.title} id="home">
-          Hello, I&apos;m...
-          <br />
-          <span className={classes.name}> John A. Kornegay</span>
-        </Title>
-        <div className={classes.divider}>
-          <Divider
-            styles={{
-              label: { color: lightDark, fontWeight: 500, fontSize: '15px' }
-            }}
-            color={colorScheme === 'light' ? 'var(--mantine-color-gray-6' : 'var(--mantine-color-dark-2'}
-            label="Software Developer"
-            labelPosition="center"
-          />
-        </div>
-        <Flex className={classes.wrapper}>
-          <Image
-            src={resumePic}
-            className={classes.image}
-            fallbackSrc="https://placehold.co/400x400?text=:)"
-            alt="headshot photo"
-          />
-          <Contact />
-        </Flex>
-      </Stack>
-      <Container className={classes.inner}>
-        <div className={classes.content}>
-          <Text className={classes.banner}>Education</Text>
-          <Divider mb="xs" />
-          <List pb={4}>
-            <List.Item
-              className={classes.listItem}
-              icon={
-                <ThemeIcon
-                  size={20}
-                  radius="md"
-                  variant="filled"
-                  className={classes.icon}
+export const SVGs = () => {
+    return (
+        <svg
+            width="350"
+            height="300"
+            viewBox="0 0 858 434"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="flex"
+        >
+            {/* Gradient Beams */}
+            <path
+                d="M269 220.5H16.5C10.9772 220.5 6.5 224.977 6.5 230.5V398.5"
+                stroke="url(#grad1)"
+            />
+            <path
+                d="M568 200H841C846.523 200 851 195.523 851 190V40"
+                stroke="url(#grad2)"
+            />
+            <path
+                d="M425.5 274V333C425.5 338.523 421.023 343 415.5 343H152C146.477 343 142 347.477 142 353V426.5"
+                stroke="url(#grad3)"
+            />
+            <path
+                d="M493 274V333.226C493 338.749 497.477 343.226 503 343.226H760C765.523 343.226 770 347.703 770 353.226V427"
+                stroke="url(#grad4)"
+            />
+            <path
+                d="M380 168V17C380 11.4772 384.477 7 390 7H414"
+                stroke="url(#grad5)"
+            />
+            <defs>
+                <motion.linearGradient
+                    variants={grad5}
+                    animate="animate"
+                    initial="initial"
+                    transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "linear",
+                        repeatDelay: 2,
+                        delay: Math.random() * 2,
+                    }}
+                    id="grad5"
                 >
-                  <IconSchool
-                    style={styles}
-                    stroke={2}
-                  />
-                </ThemeIcon>
-              }
-            >
-              <b>Master of Science in Computer Science</b><br />
-              University of Texas Rio Grande - McAllen, TX
-            </List.Item>
-            <List.Item
-              className={classes.listItem}
-              icon={
-                <ThemeIcon
-                  size={20}
-                  radius="md"
-                  variant="outline"
-                  className={classes.icon}
+                    <GradientColors />
+                </motion.linearGradient>
+                <motion.linearGradient
+                    variants={grad1}
+                    animate="animate"
+                    initial="initial"
+                    transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "linear",
+                        repeatDelay: 2,
+                        delay: Math.random() * 2,
+                    }}
+                    id="grad1"
                 >
-                  <IconSchool
-                    style={styles}
-                    stroke={2}
-                  />
-                </ThemeIcon>
-              }
-            >
-              <b>Bachelor of Science in Molecular and Cell Biology</b><br />
-              University of Texas A&M  - College Station, TX
-            </List.Item>
-          </List>
-          <Text className={classes.banner}>Feats</Text>
-          <Divider mb="md" />
-          <HeroList />
-          <Group mt={20}>
-            <Button radius="sm" size="xs" className={classes.control}>
-              <Link
-                style={{
-                  textDecoration: 'none', color: 'var(--mantine-color-gray-1)',
-                }}
-                to="https://drive.google.com/file/d/1IDtuAOY6QwitrzEDikXShbAl4URbG9NJ/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download Resume
-                <IconDownload
-                  stroke={3}
-                  style={{
-                    width: rem(12),
-                    height: rem(12),
-                    marginLeft: '5px',
-                  }}
-                />
-              </Link>
-            </Button>
-          </Group>
-        </div>
-      </Container>
-    </Container>
-  )
+                    <GradientColors />
+                </motion.linearGradient>
+                <motion.linearGradient
+                    variants={grad2}
+                    animate="animate"
+                    initial="initial"
+                    transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "linear",
+                        repeatDelay: 2,
+                        delay: Math.random() * 2,
+                    }}
+                    id="grad2"
+                >
+                    <GradientColors />
+                </motion.linearGradient>
+                <motion.linearGradient
+                    variants={grad3}
+                    animate="animate"
+                    initial="initial"
+                    transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "linear",
+                        repeatDelay: 2,
+                        delay: Math.random() * 2,
+                    }}
+                    id="grad3"
+                >
+                    <GradientColors />
+                </motion.linearGradient>
+                <motion.linearGradient
+                    variants={grad4}
+                    animate="animate"
+                    initial="initial"
+                    transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "linear",
+                        repeatDelay: 2,
+                        delay: Math.random() * 2,
+                    }}
+                    id="grad4"
+                >
+                    <GradientColors />
+                </motion.linearGradient>
+            </defs>
+            <circle
+                cx="851"
+                cy="34"
+                r="6.5"
+                fill="var(--slate-700)"
+                stroke="var(--slate-600)"
+            />
+            <circle
+                cx="770"
+                cy="427"
+                r="6.5"
+                fill="var(--slate-700)"
+                stroke="var(--slate-600)"
+            />
+            <circle
+                cx="142"
+                cy="427"
+                r="6.5"
+                fill="var(--slate-700)"
+                stroke="var(--slate-600)"
+            />
+            <circle
+                cx="6.5"
+                cy="398.5"
+                r="6"
+                fill="var(--slate-700)"
+                stroke="var(--slate-600)"
+            />
+            <circle
+                cx="420.5"
+                cy="6.5"
+                r="6"
+                fill="var(--slate-700)"
+                stroke="var(--slate-600)"
+            />
+        </svg>
+    );
+};
+const GradientColors = () => {
+    return (
+        <>
+            <stop stopColor="#18CCFC" stopOpacity="0"></stop>
+            <stop stopColor="#18CCFC"></stop>
+            <stop offset="0.325" stopColor="#6344F5"></stop>
+            <stop offset="1" stopColor="#AE48FF" stopOpacity="0"></stop>
+        </>
+    );
+};
 
-}
-
-export default Hero;
-// TODO: add link to download resume PDF
