@@ -15,7 +15,7 @@ Experienced software engineer with a strong background in developing scalable we
 
 ### Master of Science -- Computer Science
 
-**University of Texas Rio Grande Valley** - _Expected Graduation: Dec 2026_
+**University of Texas Rio Grande Valley** - _Expected Graduation Date: Dec 2026_
 
 ## Contact
 

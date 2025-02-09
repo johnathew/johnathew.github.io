@@ -33,7 +33,7 @@ export const Social = () => (
                 <motion.li
                     key={index}
                     variants={itemVariants}
-                    className="bg-slate-900 m-4 text-cyan-400 rounded shadow"
+                    className="bg-transparent m-4 text-cyan-400 rounded shadow"
                 >
                     <a href={item.link} className="hover:text-slate-50" target="_blank" rel="noopener noreferrer" aria-label={item.label}>
                         {item.icon}
