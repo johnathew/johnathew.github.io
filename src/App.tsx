@@ -5,7 +5,7 @@ import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <main className='font-primary w-full bg-gradient-to-r from-slate-950 to-slate-900 overflow-scroll items-center'>
+    <main className='font-primary w-full bg-gradient-to-r from-slate-950 to-slate-900 overflow-hide items-center'>
       <Header />
       <Hero />
       <About />
