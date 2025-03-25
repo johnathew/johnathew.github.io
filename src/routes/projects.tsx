@@ -1,5 +1,7 @@
+import { WorkInProgress } from "../pages/WorkInProgress";
+
 const projects = () => {
-    return <div className="w-full h-screen text-2xl text-amber-200">projects page</div>;
+    return <WorkInProgress />
 };
 
 export default projects;

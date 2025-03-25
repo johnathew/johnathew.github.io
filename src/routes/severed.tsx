@@ -1,7 +1,7 @@
-import Sever from "../components/Severed";
+import Severed from "../pages/Severed";
 
 const severed = () => {
-    return <Sever />
+    return <Severed />
 };
 
 export default severed;
