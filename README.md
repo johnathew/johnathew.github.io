@@ -1,79 +1,69 @@
-# Welcome to React Router!
+# Portfolio Website
+
+Live @ `https://johnathew.github.io/`
+
+A personal portfolio website showcasing my projects, skills, and experience, hosted on GitHub Pages.
+
+## Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [License](#license)
+- [Contact](#contact)
+
+## About
+
+This portfolio website was made to showcase my projects, professional experience and technical skills. Made with React and TailwindCSS.
+
+**Technologies Used:**
+
+- HTML, CSS, TypeScript
+- React, React Router
+- TailwindCSS
+- GitHub Pages for hosting
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Fully responsive design for mobile and desktop
+- Interactive UI elements
+- Project showcase section
 
-## Getting Started
+## Installation
 
-### Installation
+To run the project locally:
 
-Install the dependencies:
+### Prerequisites:
 
-```bash
-npm install
-```
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
 
-### Development
+### Steps:
 
-Start the development server with HMR:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/johnathew/johnathew.github.io.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd your-portfolio
+   ```
+3. If using a package manager, install dependencies:
+   ```bash
+   npm install  # or yarn install
+   ```
+4. Run the project locally:
+   ```bash
+   npm start  # or yarn start
+   ```
 
-```bash
-npm run dev
-```
+## License
 
-Your application will be available at `http://localhost:5173`.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Building for Production
+## Contact
 
-Create a production build:
+For inquiries, you can reach me at:
 
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
----
-
-Built with ❤️ using React Router.
+- Email: jakornegay01@gmail.com
+- LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/john-kornegay-00541411b/)
