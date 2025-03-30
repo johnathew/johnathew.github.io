@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-primary: "Inter", "serif";
+}
+/* className='font-primary w-full bg-gradient-to-r from-slate-950 to-slate-900 overflow-scroll items-center' */
+
+html {
+  scroll-behavior: smooth;
+  padding: 2px;
+  background-color: rgb(2, 6, 24);
+  display: flex;
+  flex-direction: column;
+}
+body {
+  font-family: var(--font-primary);
+  background: linear-gradient(
+    to right,
+    oklch(0.129 0.042 264.695),
+    oklch(0.208 0.042 265.755)
+  );
+  color: rgb(255, 255, 255);
+}
+@layer utilities {
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .side {
+    @apply absolute w-full h-full;
+  }
+
+  .front {
+    transform: rotateY(0deg) translateZ(40px);
+    background-color: rgba(9, 48, 72, 0.578);
+    border: 1px solid var(--color-cyan-400);
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(40px);
+    background-color: rgba(9, 48, 72, 0.578);
+    border: 1px solid var(--color-cyan-400);
+  }
+
+  .back {
+    transform: rotateY(180deg) translateZ(40px);
+    background-color: rgba(9, 48, 72, 0.578);
+    border: 1px solid var(--color-cyan-400);
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(40px);
+    background-color: rgba(9, 48, 72, 0.578);
+    border: 1px solid var(--color-cyan-400);
+  }
+
+  .top {
+    transform: rotateX(90deg) translateZ(40px);
+    background-color: rgba(9, 48, 72, 0.578);
+    border: 1px solid var(--color-cyan-400);
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(40px);
+    background-color: rgba(9, 48, 72, 0.578);
+    border: 1px solid var(--color-cyan-400);
+  }
+}
