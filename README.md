@@ -66,4 +66,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For inquiries, you can reach me at:
 
 - Email: jakornegay01@gmail.com
-- LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/john-kornegay-00541411b/)
+- LinkedIn: [John Kornegay](https://www.linkedin.com/in/john-kornegay-00541411b/)
