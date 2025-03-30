@@ -72,6 +72,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
           <code>{stack}</code>
         </pre>
       )}
+      <a href="/" className="text-blue-500 underline">Go back to the homepage</a> {/* Added link to homepage */}
     </main>
   );
 }
