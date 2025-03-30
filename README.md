@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Live @ `https://johnathew.github.io/`
+Live @ https://johnathew.github.io/
 
 A personal portfolio website showcasing my projects, skills, and experience, hosted on GitHub Pages.
 
