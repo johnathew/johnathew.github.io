@@ -34,36 +34,36 @@ body {
   .front {
     transform: rotateY(0deg) translateZ(40px);
     background-color: rgba(9, 48, 72, 0.578);
-    border: 1px solid var(--color-cyan-400);
+    border: 0.01px solid var(--color-cyan-400);
   }
 
   .right {
     transform: rotateY(90deg) translateZ(40px);
     background-color: rgba(9, 48, 72, 0.578);
-    border: 1px solid var(--color-cyan-400);
+    border: 0.01px solid var(--color-cyan-400);
   }
 
   .back {
     transform: rotateY(180deg) translateZ(40px);
     background-color: rgba(9, 48, 72, 0.578);
-    border: 1px solid var(--color-cyan-400);
+    border: 0.01px solid var(--color-cyan-400);
   }
 
   .left {
     transform: rotateY(-90deg) translateZ(40px);
     background-color: rgba(9, 48, 72, 0.578);
-    border: 1px solid var(--color-cyan-400);
+    border: 0.01px solid var(--color-cyan-400);
   }
 
   .top {
     transform: rotateX(90deg) translateZ(40px);
     background-color: rgba(9, 48, 72, 0.578);
-    border: 1px solid var(--color-cyan-400);
+    border: 0.01px solid var(--color-cyan-400);
   }
 
   .bottom {
     transform: rotateX(-90deg) translateZ(40px);
     background-color: rgba(9, 48, 72, 0.578);
-    border: 1px solid var(--color-cyan-400);
+    border: 0.01px solid var(--color-cyan-400);
   }
 }

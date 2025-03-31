@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const Carousel = () => {
     const images = [diego, diego, diego, diego, diego, diego, diego, diego, diego];
     const FAST_DUR = 15;
-    const SLOW_DUR = 50;
+    const SLOW_DUR = 90;
 
     const [duration, setDuration] = useState(FAST_DUR);
     const [mustFinish, setMustFinish] = useState(false);
@@ -20,7 +20,7 @@ const Carousel = () => {
 
     useEffect(() => {
         let controls
-        let finPosition = -width / 2 - 1;
+        let finPosition = -width / 1;
 
         if (mustFinish) {
             controls = animate(xTranslation, [xTranslation.get(), finPosition], {
@@ -57,12 +57,14 @@ const Carousel = () => {
                     setMustFinish(true)
                     setDuration(FAST_DUR)
                 }}
+                exit={{ opacity: 0, scale: 0 }}
             >
-                {[...images, ...images].map((src, index) => (
+                {[...images].map((src, index) => (
                     <motion.div
                         key={index}
                         className="item w-1/4 flex-shrink-0"
-                        whileHover={{ scale: 1.5 }}
+                        whileHover={{ scale: 1.2 }}
+
                     >
                         <img src={src} alt={`Slide ${index + 1}`} className="rounded-sm w-auto h-auto" />
                     </motion.div>

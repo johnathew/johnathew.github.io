@@ -12,7 +12,7 @@ export function meta({ }: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col align-middle justify-around overflow-scroll h-dvh w-full">
       <Hero />
       <HeroDescription />
       <SocialLinks />

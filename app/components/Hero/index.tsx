@@ -76,25 +76,25 @@ const grad5 = {
 const Hero = () => {
     return (
         <section
-            className="flex w-full h-svh items-center justify-around antialiased overflow-hidden"
+            className="relative h-2/5 flex flex-col w-full md:h-2/5 top-0 items-center justify-between  antialiased"
             aria-labelledby="hero-heading"
         >
-            <div className="flex flex-col items-center align-middle absolute">
+            <div className="flex animate-pulse opacity-70 flex-col items-center align-middle justify-center w-full h-full  top-0 left-0 z-0">
                 <Cube />
                 <SVGs />
-                <div className="flex flex-col h-3/4">
-                    <h1
-                        id="hero-heading"
-                        className="text-4xl sm:text-5xl text-white font-light z-10"
-                    >
-                        <span className="text-cyan-400">John</span> Kornegay
-                    </h1>
-                    <span className="md:text-md text-sm text-slate-200">
-                        <AnimatedText />
-                    </span>
-                </div>
             </div>
-        </section>
+            <div className="relative flex flex-col w-full justify-center align-middle  items-center h-1/3 z-10">
+                <h1
+                    id="hero-heading"
+                    className="text-4xl sm:text-5xl text-white font-light z-10"
+                >
+                    <span className="text-cyan-400">John</span> Kornegay
+                </h1>
+                <h2 className="md:text-md  min-w-1/2 sm:min-w-1/4 px-2  text-sm text-slate-200">
+                    <AnimatedText />
+                </h2>
+            </div>
+        </section >
     );
 };
 
