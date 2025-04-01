@@ -14,7 +14,7 @@ export default function RotatingCube() {
     return (
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" aria-label="Rotating 3D cube">
             <motion.div
-                className="relative w-20 h-20 transform-style-preserve-3d"
+                className="w-20 h-20 transform-style-preserve-3d"
                 ref={cubeRef}
             >
                 {/* Cube sides */}

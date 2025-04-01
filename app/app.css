@@ -13,12 +13,6 @@ html {
 }
 body {
   font-family: var(--font-primary);
-  background: radial-gradient(
-    at right bottom,
-    rgb(29, 35, 50),
-    rgb(12, 31, 46),
-    rgb(7, 19, 39)
-  );
   color: rgb(255, 255, 255);
 }
 
@@ -65,5 +59,14 @@ body {
     transform: rotateX(-90deg) translateZ(40px);
     background-color: rgba(9, 48, 72, 0.578);
     border: 0.01px solid var(--color-cyan-400);
+  }
+
+  .bg-custom-gradient {
+    background: radial-gradient(
+      at right bottom,
+      rgb(29, 35, 50),
+      rgb(12, 31, 46),
+      rgb(7, 19, 39)
+    );
   }
 }

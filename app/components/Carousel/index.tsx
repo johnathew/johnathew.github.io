@@ -1,12 +1,19 @@
 import useMeasure from "react-use-measure";
-import diego from "../../assets/diego.png";
+import tailwindSVG from "../../assets/icons/tailwind.svg"
+import photoshop from "../../assets/icons/photoshop.svg"
+import typescriptSVG from "../../assets/icons/typescript.svg"
+import githubSVG from "../../assets/icons/github.svg"
+import pythonSVG from "../../assets/icons/python.svg"
+import rrSVG from "../../assets/icons/reactRouter.svg"
+import react from "../../assets/icons/react2.svg"
+import docker from "../../assets/icons/docker.svg"
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 
 
 const Carousel = () => {
-    const images = [diego, diego, diego, diego, diego, diego, diego, diego, diego];
-    const FAST_DUR = 15;
+    const images = [tailwindSVG, photoshop, typescriptSVG, githubSVG, pythonSVG, rrSVG, react, docker];
+    const FAST_DUR = 10;
     const SLOW_DUR = 90;
 
     const [duration, setDuration] = useState(FAST_DUR);
@@ -20,7 +27,7 @@ const Carousel = () => {
 
     useEffect(() => {
         let controls
-        let finPosition = -width / 1;
+        let finPosition = -width / 2 - 1;
 
         if (mustFinish) {
             controls = animate(xTranslation, [xTranslation.get(), finPosition], {
@@ -43,12 +50,13 @@ const Carousel = () => {
 
         return controls?.stop;
     }, [xTranslation, width, duration, rerender]);
-
+    // TODO: Add tooltip on hover
     return (
-        <div className="carousel overflow-hidden relative w-full h-full flex justify-center items-center">
+        <div className="relative carousel w-full md:overflow-auto overflow-clip md:w-1/2 md:h-1/4 flex items-center [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
             <motion.div
-                className="inner-carousel flex"
-                ref={ref} style={{ x: xTranslation }}
+                className="flex"
+                ref={ref}
+                style={{ x: xTranslation }}
                 onHoverStart={() => {
                     setMustFinish(true);
                     setDuration(SLOW_DUR)
@@ -57,16 +65,10 @@ const Carousel = () => {
                     setMustFinish(true)
                     setDuration(FAST_DUR)
                 }}
-                exit={{ opacity: 0, scale: 0 }}
             >
-                {[...images].map((src, index) => (
-                    <motion.div
-                        key={index}
-                        className="item w-1/4 flex-shrink-0"
-                        whileHover={{ scale: 1.2 }}
-
-                    >
-                        <img src={src} alt={`Slide ${index + 1}`} className="rounded-sm w-auto h-auto" />
+                {[...images, ...images].map((src, index) => (
+                    <motion.div key={index} whileHover={{ scale: 1.2 }}>
+                        <img src={src} alt={`Slide ${index + 1}`} className="relative min-w-[80px] px-5 mx-2 mb-2 overflow-hidden h-auto" />
                     </motion.div>
                 ))}
             </motion.div>

@@ -1,14 +1,15 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { GithubLogo, InstagramLogo, LinkedinLogo, Envelope } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 
 const contactIcons = [
     { icon: <LinkedinLogo size={30} />, link: "https://www.linkedin.com/in/john-kornegay-00541411b/", label: "LinkedIn" },
     { icon: <GithubLogo size={30} />, link: "https://github.com/johnathew", label: "GitHub" },
-    { icon: <InstagramLogo size={30} />, link: "https://www.instagram.com/johnathew_k/", label: "Instagram" }
+    { icon: <InstagramLogo size={30} />, link: "https://www.instagram.com/johnathew_k/", label: "Instagram" },
+    { icon: <Envelope size={30} />, link: "mailto: jakornegay01@gmail.com", label: "Email" },
 ];
 
 const containerVariants = {
-    hidden: { opacity: 1 },
+    hidden: { opacity: 1, },
     show: {
         opacity: 1,
         transition: {
@@ -18,12 +19,19 @@ const containerVariants = {
 };
 
 const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: -20 },
     show: { opacity: 1, y: 0 },
 };
 
 const SocialLinks = () => (
-    <section id="External Links" className="w-full px-4 mt-2 items-center justify-center flex flex-col" aria-labelledby="links-heading">
+    <section id="External Links" className="w-full px-2 mt-2 items-center justify-center flex flex-col" aria-labelledby="links-heading">
+        <div className="flex items-center w-full sm:w-1/2">
+            <hr className="flex-grow border-t-[0.5px] border-gray-300" aria-hidden="true" />
+            <h2 id="about-heading" className="px-5 text-3xl font-light h-full text-cyan-400 text-center">
+                Contact Links
+            </h2>
+            <hr className="flex-grow border-t-[0.5px] border-gray-300" aria-hidden="true" />
+        </div>
         <motion.ul
             variants={containerVariants}
             initial="hidden"
