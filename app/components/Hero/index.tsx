@@ -79,11 +79,11 @@ const Hero = () => {
             className="relative h-auto flex flex-col w-full md:h-1/4 mt-10 items-center justify-between antialiased"
             aria-labelledby="hero-heading"
         >
-            <div className="flex animate-pulse opacity-70 flex-col items-center align-middle justify-center w-full h-full relative">
+            <div className="flex animate-pulse opacity-70 flex-col items-center content-center justify-center w-full h-full relative">
                 <Cube />
                 <SVGs />
             </div>
-            <div className="flex mt-4 flex-col w-full justify-center align-middle items-center h-1/3 z-10">
+            <div className="flex mt-4 flex-col w-full justify-center items-center h-1/3 z-10">
                 <h1
                     id="hero-heading"
                     className="text-4xl sm:text-5xl text-white font-light z-10"

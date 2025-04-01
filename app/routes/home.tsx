@@ -3,6 +3,7 @@ import Hero from "~/components/Hero";
 import SocialLinks from "~/components/Social";
 import { HeroDescription } from "~/components/HeroDescription";
 import Carousel from "~/components/Carousel";
+import { Footer } from "~/components/Footer";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -18,5 +19,6 @@ export default function Home() {
       <HeroDescription />
       <Carousel />
       <SocialLinks />
+      <Footer />
     </main>)
 }
