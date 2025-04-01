@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 const Carousel = () => {
     const images = [tailwindSVG, photoshop, typescriptSVG, githubSVG, pythonSVG, rrSVG, react, docker];
-    const FAST_DUR = 10;
+    const FAST_DUR = 15;
     const SLOW_DUR = 90;
 
     const [duration, setDuration] = useState(FAST_DUR);

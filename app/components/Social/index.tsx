@@ -28,7 +28,7 @@ const SocialLinks = () => (
         <div className="flex items-center w-full sm:w-1/2">
             <hr className="flex-grow border-t-[0.5px] border-gray-300" aria-hidden="true" />
             <h2 id="about-heading" className="px-5 text-3xl font-light h-full text-cyan-400 text-center">
-                Contact Links
+                Contact
             </h2>
             <hr className="flex-grow border-t-[0.5px] border-gray-300" aria-hidden="true" />
         </div>

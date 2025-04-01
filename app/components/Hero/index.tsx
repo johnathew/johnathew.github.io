@@ -90,7 +90,7 @@ const Hero = () => {
                 >
                     <span className="text-cyan-400">John</span> Kornegay
                 </h1>
-                <h2 className="md:text-md  min-w-1/2 sm:min-w-1/4 px-2  text-sm text-slate-200">
+                <h2 className="md:text-md w-full text-center text-sm text-slate-200">
                     <AnimatedText />
                 </h2>
             </div>
