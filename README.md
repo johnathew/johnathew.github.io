@@ -19,7 +19,7 @@ This portfolio website was made to showcase my projects, professional experience
 **Technologies Used:**
 
 - HTML, CSS, TypeScript
-- React, React Router
+- React, React Router. Framer Motion
 - TailwindCSS
 - GitHub Pages for hosting
 
@@ -27,7 +27,7 @@ This portfolio website was made to showcase my projects, professional experience
 
 - Fully responsive design for mobile and desktop
 - Interactive UI elements
-- Project showcase section
+- Project showcase section (work in progress)
 
 ## Installation
 

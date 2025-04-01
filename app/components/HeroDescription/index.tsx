@@ -33,8 +33,6 @@ export const HeroDescription = () => {
                     {item?.text}
                 </p>
             ))}
-
-
         </section>
     );
 };
