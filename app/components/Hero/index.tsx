@@ -76,14 +76,14 @@ const grad5 = {
 const Hero = () => {
     return (
         <section
-            className="relative h-auto flex flex-col w-full mt-10 items-center justify-between antialiased"
+            className="relative h-auto flex flex-col w-full items-center justify-center antialiased"
             aria-labelledby="hero-heading"
         >
             <div className="flex animate-pulse opacity-70 flex-col items-center content-center justify-center w-full h-full">
                 <Cube />
                 <SVGs />
             </div>
-            <div className="flex mt-5  flex-col w-full justify-center items-center h-1/4 z-10">
+            <div className="relative flex pt-10 flex-col w-full justify-center items-center h-auto z-10">
                 <h1
                     id="hero-heading"
                     className="text-4xl sm:text-4xl text-white font-light z-10"

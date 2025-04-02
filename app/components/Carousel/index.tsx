@@ -52,7 +52,7 @@ const Carousel = () => {
     }, [xTranslation, width, duration, rerender]);
     // TODO: Add tooltip on hover
     return (
-        <div className="relative carousel w-full overflow-clip md:w-1/2 md:h-1/4 flex items-center [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+        <div className="relative mt-2 carousel w-full overflow-clip md:w-1/2 md:h-auto flex items-center [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
             <motion.div
                 className="flex"
                 ref={ref}
@@ -67,8 +67,8 @@ const Carousel = () => {
                 }}
             >
                 {[...images, ...images].map((src, index) => (
-                    <motion.div key={index} whileHover={{ scale: 1.2 }}>
-                        <img src={src} alt={`Slide ${index + 1}`} className="relative min-w-[80px] px-5 mx-2 mb-2 overflow-hidden h-auto" />
+                    <motion.div key={index} whileHover={{ scale: 1.2 }} className="mx-2 mt-2 flex items-center justify-center">
+                        <img src={src} alt={`Slide ${index + 1}`} className="relative p-2 border-2 border-slate-900 hover:border-cyan-400 bg-slate-300 rounded-sm min-w-[70px] px-5 mx-2 mb-2 overflow-hidden h-auto" />
                     </motion.div>
                 ))}
             </motion.div>

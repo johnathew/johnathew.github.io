@@ -11,6 +11,8 @@ import favicon from "./assets/favicon.ico"
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Header } from "./components/Header";
+import Loading from "./components/Fallback";
+
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -43,6 +45,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </body>
     </html>
   );
+}
+
+export function HydrateFallback() {
+  return <Loading />;
 }
 
 export default function App() {
