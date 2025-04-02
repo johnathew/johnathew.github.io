@@ -16,11 +16,17 @@ const containerVariants = {
             staggerChildren: 0.5,
         },
     },
+
 };
 
 const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
+    transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+    },
 };
 
 const SocialLinks = () => (
