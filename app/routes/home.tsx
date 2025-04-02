@@ -14,7 +14,7 @@ export function meta({ }: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main className="flex bg-custom-gradient bg-cover bg-fixed relative flex-col align-middle justify-around items-center min-h-screen w-full">
+    <main className="flex bg-custom-gradient overflow-x-hidden bg-cover bg-fixed relative flex-col align-middle justify-around items-center min-h-screen w-full">
       <Hero />
       <HeroDescription />
       <Carousel />
