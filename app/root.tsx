@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import favicon from "./assets/favicon.ico"
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Header } from "./components/Header";
@@ -30,6 +31,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/x-icon" href={favicon} />
         <Meta />
         <Links />
       </head>

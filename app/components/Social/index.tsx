@@ -27,7 +27,7 @@ const SocialLinks = () => (
     <section id="External Links" className="w-full px-2 mt-2 items-center justify-center flex flex-col" aria-labelledby="links-heading">
         <div className="flex items-center w-full sm:w-1/2">
             <hr className="flex-grow border-t-[0.5px] border-gray-300" aria-hidden="true" />
-            <h2 id="about-heading" className="px-5 text-3xl font-light h-full text-cyan-400 text-center">
+            <h2 id="contactjohn-heading" className="px-5 text-3xl font-light h-full text-cyan-400 text-center">
                 Contact
             </h2>
             <hr className="flex-grow border-t-[0.5px] border-gray-300" aria-hidden="true" />

@@ -52,7 +52,7 @@ const Carousel = () => {
     }, [xTranslation, width, duration, rerender]);
     // TODO: Add tooltip on hover
     return (
-        <div className="relative carousel w-full md:overflow-auto overflow-clip md:w-1/2 md:h-1/4 flex items-center [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+        <div className="relative carousel w-full overflow-clip md:w-1/2 md:h-1/4 flex items-center [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
             <motion.div
                 className="flex"
                 ref={ref}
