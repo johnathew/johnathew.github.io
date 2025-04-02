@@ -76,23 +76,23 @@ const grad5 = {
 const Hero = () => {
     return (
         <section
-            className="relative h-auto flex flex-col w-full md:h-1/4 mt-10 items-center justify-between antialiased"
+            className="relative h-auto flex flex-col w-full mt-10 items-center justify-between antialiased"
             aria-labelledby="hero-heading"
         >
-            <div className="flex animate-pulse opacity-70 flex-col items-center content-center justify-center w-full h-full relative">
+            <div className="flex animate-pulse opacity-70 flex-col items-center content-center justify-center w-full h-full">
                 <Cube />
                 <SVGs />
             </div>
-            <div className="flex mt-4 flex-col w-full justify-center items-center h-1/3 z-10">
+            <div className="flex mt-5  flex-col w-full justify-center items-center h-1/4 z-10">
                 <h1
                     id="hero-heading"
-                    className="text-4xl sm:text-5xl text-white font-light z-10"
+                    className="text-4xl sm:text-4xl text-white font-light z-10"
                 >
                     <span className="text-cyan-400">John</span> Kornegay
                 </h1>
-                <p className="md:text-md w-full text-center text-sm text-slate-200">
+                <div className="md:text-md w-full text-center text-sm text-slate-200">
                     <AnimatedText />
-                </p>
+                </div>
             </div>
         </section >
     );
@@ -103,7 +103,7 @@ const SVGs = () => {
         <svg
             width="350"
             height="200"
-            viewBox="0 0 400 434"
+            viewBox="0 0 800 400"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="flex"

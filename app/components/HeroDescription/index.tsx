@@ -5,10 +5,6 @@ export const HeroDescription = () => {
             text: "Hello, my name is John Kornegay. I am a computer science graduate student at UTRGV in Edinburg, TX. As a software developer with a passion for technology, I enjoy coding, problem-solving, and web development.",
             label: "Introduction"
         },
-        , {
-            text: "I am currently seeking internship opportunities to gain practical experience and further develop my skills in the field.",
-            label: "Internship"
-        },
         {
             text: (
                 <>
@@ -29,7 +25,7 @@ export const HeroDescription = () => {
             </div>
 
             {text.map((item, index) => (
-                <p key={index} className="text-slate-50 text-center py-2 font-extralight text-sm/7 md:text-md/7 md:w-1/2 sm:w-3/4 w-full" aria-label={item?.label}>
+                <p key={index} className="text-slate-50 text-center py-2 font-extralight text-md/7 md:text-md/7 md:w-1/2 sm:w-3/4 w-full" aria-label={item?.label}>
                     {item?.text}
                 </p>
             ))}

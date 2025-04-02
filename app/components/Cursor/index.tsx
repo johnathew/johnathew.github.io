@@ -15,7 +15,7 @@ const cursorVariants = {
 
 export default function CursorBlinker() {
     return (
-        <motion.div
+        <motion.span
             variants={cursorVariants}
             animate="blinking"
             className="inline-block h-5 w-[4px] translate-y-1 bg-cyan-400"
