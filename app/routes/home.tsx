@@ -7,8 +7,9 @@ import { Footer } from "~/components/Footer";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "John's Resume" },
-    { name: "description", content: "Welcome to my website!" },
+    { title: "John Kornegay - Web Developer Portfolio" },
+    { name: "description", content: "Explore John Kornegay's portfolio showcasing web development projects, skills, and experience in React and TailwindCSS." },
+    { name: "keywords", content: "John Kornegay, Portfolio, Web Developer, React, TailwindCSS, Projects" },
   ];
 }
 

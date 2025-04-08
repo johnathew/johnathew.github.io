@@ -34,8 +34,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/x-icon" href={favicon} />
+        <title>John Kornegay's Portfolio website</title>
         <Meta />
         <Links />
+        <meta name="keywords" content="John Kornegay, Portfolio, Web Developer, React, TailwindCSS, Projects" />
+        <meta name="author" content="John Kornegay" />
+        <meta property="og:title" content="John Kornegay's Portfolio" />
+        <meta property="og:description" content="Showcasing my projects, skills, and experience." />
+        <meta property="og:url" content="https://johnathew.github.io/" />
+        <meta property="og:type" content="website" />
       </head>
       <body>
         <Header />
@@ -80,7 +87,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
           <code>{stack}</code>
         </pre>
       )}
-      <a href="/" className="text-blue-500 underline">Go back to the homepage</a> {/* Added link to homepage */}
+      <a href="/" className="text-blue-500 underline">Go back to the homepage</a>
     </main>
   );
 }
