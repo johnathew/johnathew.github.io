@@ -26,14 +26,14 @@ const ScaryNumbers = () => {
                             times: [0, 1],
                         }}
                         key={numIndex}
-                        className="text-md md:text-2xl p-1 md:p-3 duration-700 hover:scale-170 hover:-translate-y-1"
+                        className="text-md md:text-2xl p-1 md:p-3 duration-700 cursor-pointer hover:scale-170 hover:-translate-y-1"
                     >
                         {num}
                     </motion.li>
                 ) : (
                     <li
                         key={numIndex}
-                        className="text-md md:text-2xl p-1 md:p-3 duration-700 hover:scale-170 hover:-translate-y-1"
+                        className="text-md md:text-2xl p-1 md:p-3 duration-700 cursor-pointer hover:scale-170 hover:-translate-y-1"
                     >
                         {num}
                     </li>

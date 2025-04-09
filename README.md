@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Live @ https://johnathew.github.io/
+Live @ https://johnathew.com
 
 A personal portfolio website showcasing my projects, skills, and experience, hosted on GitHub Pages.
 
@@ -46,7 +46,7 @@ To run the project locally:
    ```
 2. Navigate to the project directory:
    ```bash
-   cd your-portfolio
+   cd johnathew.github.io
    ```
 3. If using a package manager, install dependencies:
    ```bash
@@ -54,7 +54,7 @@ To run the project locally:
    ```
 4. Run the project locally:
    ```bash
-   npm start  # or yarn start
+   npm run dev  # or yarn start
    ```
 
 ## License
